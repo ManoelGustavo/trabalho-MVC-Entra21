@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Categoria
+    public class Categoria
     {
+
     }
 }
