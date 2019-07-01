@@ -22,7 +22,7 @@ cpf = @CPF,
 id_contabilidade = @ID_CONTABILIDADE
 WHERE id = @ID";
             comando.Parameters.AddWithValue("@NOME", cliente.Nome);
-            comando.Parameters.AddWithValue("@CPF", cliente.CPF);
+            comando.Parameters.AddWithValue("@CPF", cliente.Cpf);
             comando.Parameters.AddWithValue("@ID_CONTABILIDADE", cliente.IdContabilidade);
             comando.Parameters.AddWithValue("@ID", cliente.Id);
 
@@ -50,7 +50,7 @@ WHERE id = @ID";
 OUTPUT INSERTED.ID
 VALUES (@NOME, @CPF, @ID_CONTABILIDADE)";
             comando.Parameters.AddWithValue("@NOME", cliente.Nome);
-            comando.Parameters.AddWithValue("@CPF", cliente.CPF);
+            comando.Parameters.AddWithValue("@CPF", cliente.Cpf);
             comando.Parameters.AddWithValue("@ID_CONTABILIDADE", cliente.IdContabilidade);
 
             int id = Convert.ToInt32(comando.ExecuteScalar());
@@ -76,7 +76,7 @@ VALUES (@NOME, @CPF, @ID_CONTABILIDADE)";
             DataRow row = table.Rows[0];
             Cliente cliente = new Cliente();
             cliente.Nome = row["nome"].ToString();
-            cliente.CPF = row["cpf"].ToString();
+            cliente.Cpf = row["cpf"].ToString();
             cliente.IdContabilidade = Convert.ToInt32(row["id_contabilidade"]);
             cliente.Id = Convert.ToInt32(row["id"]);
 
@@ -91,7 +91,7 @@ contabilidades.id AS 'ContabilidadeId',
 contabilidades.nome AS 'ContabilidadeNome',
 clientes.id AS 'Id',
 clientes.nome AS 'Nome',
-clientes.cpf AS 'CPF'
+clientes.cpf AS 'Cpf'
 FROM clientes
 INNER JOIN contabilidades ON (clientes.id_contabilidade = contabilidades.id)";
 
@@ -105,7 +105,7 @@ INNER JOIN contabilidades ON (clientes.id_contabilidade = contabilidades.id)";
             {
                 Cliente cliente = new Cliente();
                 cliente.Nome = row["nome"].ToString();
-                cliente.CPF = row["cpf"].ToString();
+                cliente.Cpf = row["cpf"].ToString();
                 cliente.Id = Convert.ToInt32(row["id"]);
                 cliente.IdContabilidade = Convert.ToInt32(row["id_contabilidade"]);
 
