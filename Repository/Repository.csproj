@@ -43,10 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase\Conexao.cs" />
+    <Compile Include="Interfaces\IClienteRepository.cs" />
     <Compile Include="Interfaces\IContabilidadeRepository.cs" />
     <Compile Include="Interfaces\IContaPagarRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoriaRepository.cs" />
+    <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\ContabilidadeRepository.cs" />
     <Compile Include="Repositories\ContaPagarRepository.cs" />
   </ItemGroup>
