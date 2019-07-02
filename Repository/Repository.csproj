@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DataBase\Conexao.cs" />
     <Compile Include="Interfaces\ICartaoCreditoRepository.cs" />
+    <Compile Include="Interfaces\ICategoriaRepository.cs" />
     <Compile Include="Interfaces\IClienteRepository.cs" />
     <Compile Include="Interfaces\IContabilidadeRepository.cs" />
     <Compile Include="Interfaces\IContaPagarRepository.cs" />
