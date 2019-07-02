@@ -13,7 +13,7 @@ namespace Repository.Repositories
 {
     public class ContabilidadeRepository : IContabilidadeRepository
     {
-        public bool Alterar(Contabilidade contabilidade)
+        public bool Atualizar(Contabilidade contabilidade)
         {
             SqlCommand comando = Conexao.AbrirConexao();
             comando.CommandText = @"UPDATE contabilidades SET nome = @NOME WHERE id = @ID";

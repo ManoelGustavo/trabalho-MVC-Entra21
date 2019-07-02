@@ -15,7 +15,7 @@ namespace Repository.Interfaces
 
         Contabilidade ObterPeloId(int id);
 
-        bool Alterar(Contabilidade contabilidade);
+        bool Atualizar(Contabilidade contabilidade);
 
         bool Apagar(int id);
 

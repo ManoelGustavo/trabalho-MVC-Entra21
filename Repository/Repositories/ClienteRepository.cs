@@ -13,7 +13,7 @@ namespace Repository.Repositories
 {
     public class ClienteRepository : IClienteRepository
     {
-        public bool Alterar(Cliente cliente)
+        public bool Atualizar(Cliente cliente)
         {
             SqlCommand comando = Conexao.AbrirConexao();
             comando.CommandText = @"UPDATE clientes SET
