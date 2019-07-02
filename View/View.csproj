@@ -1692,6 +1692,12 @@
     <Content Include="Content\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Content\css\sb-admin.css" />
     <Content Include="Content\css\sb-admin.min.css" />
+    <Content Include="Content\js\demo\chart-area-demo.js" />
+    <Content Include="Content\js\demo\chart-bar-demo.js" />
+    <Content Include="Content\js\demo\chart-pie-demo.js" />
+    <Content Include="Content\js\demo\datatables-demo.js" />
+    <Content Include="Content\js\sb-admin.js" />
+    <Content Include="Content\js\sb-admin.min.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
@@ -1923,7 +1929,6 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Views\CartaoCredito\" />
-    <Folder Include="Views\Categoria\" />
     <Folder Include="Views\Cliente\" />
     <Folder Include="Views\Contabilidade\" />
   </ItemGroup>

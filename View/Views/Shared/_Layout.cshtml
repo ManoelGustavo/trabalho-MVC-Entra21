@@ -8,18 +8,29 @@
     <meta name="author" content="">
     <title>SB Admin -</title>
     <link href="~/Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
     <link href="~/Content/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
     <link href="~/Content/css/sb-admin.css" rel="stylesheet">
+
 </head>
+
 <body id="page-top">
+
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-        <a class="navbar-brand mr-1" href="index.html">Contabilidade Dashboard</a>
+
+        <a class="navbar-brand mr-1" href="#">Contabilidade Dashboard</a>
+
         <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
             <i class="fas fa-bars"></i>
         </button>
+
+        <!-- Navbar Search -->
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Procurar por..." aria-label="Search" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="Procurando por..." aria-label="Search" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="button">
                         <i class="fas fa-search"></i>
@@ -27,23 +38,81 @@
                 </div>
             </div>
         </form>
-        <div id="wrapper">
-
-            <ul class="sidebar navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-
-                @RenderBody()
     </nav>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Principal</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Listas</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Usuarios</a>
+                    <a class="dropdown-item" href="#">Contas a pagar</a>
+                    <a class="dropdown-item" href="#">Categorias</a>
+                    <a class="dropdown-item" href="#">Clientes</a>
+                    <a class="dropdown-item" href="#">Contas a Receber</a>
+                    <a class="dropdown-item" href="#">Cartões de Crédito</a>
+                    <a class="dropdown-item" href="#">Compras</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Cadastrar</span>
+                </a>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="#">Usuarios</a>
+                    <a class="dropdown-item" href="#">Contas a pagar</a>
+                    <a class="dropdown-item" href="#">Categorias</a>
+                    <a class="dropdown-item" href="#">Clientes</a>
+                    <a class="dropdown-item" href="#">Contas a Receber</a>
+                    <a class="dropdown-item" href="#">Cartões de Crédito</a>
+                    <a class="dropdown-item" href="#">Compras</a>
+                </div>
+            </li>
+        </ul>
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Um website qualquer 2019</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
     <script src="~/Content/vendor/jquery/jquery.min.js"></script>
     <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
     <script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <script src="~/Content/vendor/chart.js/Chart.min.js"></script>
+    <script src="~/Content/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="~/Content/vendor/datatables/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom scripts for all pages-->
     <script src="~/Content/js/sb-admin.min.js"></script>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <!-- Demo scripts for this page-->
+    <script src="~/Content/js/demo/datatables-demo.js"></script>
+    <script src="~/Content/js/demo/chart-area-demo.js"></script>
+
+@RenderBody()
 </body>
 </html>
