@@ -1915,6 +1915,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Categoria\Index.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1925,7 +1926,6 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Views\CartaoCredito\" />
-    <Folder Include="Views\Cliente\" />
     <Folder Include="Views\Contabilidade\" />
   </ItemGroup>
   <ItemGroup>
