@@ -10,6 +10,8 @@ namespace Repository.Interfaces
     interface IUsuarioRepository
     {
         int Inserir(Usuario usuario);
+        bool Atualizar(Usuario usuario);
+        bool Apagar(int id);
         List<Usuario> ObterTodos();
         Usuario ObterPeloId(int id);
     }

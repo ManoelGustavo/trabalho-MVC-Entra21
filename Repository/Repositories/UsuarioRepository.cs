@@ -13,6 +13,30 @@ namespace Repository.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+        public bool Apagar(int id)
+        {
+            SqlCommand comando = Conexao.AbrirConexao();
+            comando.CommandText = "DELETE FROM usuarios WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+            int quantidade = comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return quantidade == 1;
+        }
+
+        public bool Atualizar(Usuario usuario)
+        {
+            SqlCommand comando = Conexao.AbrirConexao();
+            comando.CommandText = @"UPDATE usuarios SET id_contabilidade = @ID_CONTABILIDADE, login = @LOGIN, senha = @SENHA, data_nascimento = @DATA_NASCIMENTO WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", usuario.Id);
+            comando.Parameters.AddWithValue("@ID_CONTABILIDADE", usuario.IdContabilidade);
+            comando.Parameters.AddWithValue("@LOGIN", usuario.Login);
+            comando.Parameters.AddWithValue("@SENHA", usuario.Senha);
+            comando.Parameters.AddWithValue("@DATA_NASCIMENTO", usuario.DataNascimento);
+            int quantidade = comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return quantidade == 1;
+        }
+
         public int Inserir(Usuario usuario)
         {
             SqlCommand comando = Conexao.AbrirConexao();
