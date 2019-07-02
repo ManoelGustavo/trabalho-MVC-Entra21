@@ -44,6 +44,7 @@
     <Compile Include="CartaoCredito.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Comprar.cs" />
     <Compile Include="Contabilidade.cs" />
     <Compile Include="ContaPagar.cs" />
     <Compile Include="ContaReceber.cs" />

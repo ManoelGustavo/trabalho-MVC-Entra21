@@ -46,6 +46,7 @@
     <Compile Include="Interfaces\ICartaoCreditoRepository.cs" />
     <Compile Include="Interfaces\ICategoriaRepository.cs" />
     <Compile Include="Interfaces\IClienteRepository.cs" />
+    <Compile Include="Interfaces\IComprarRepository.cs" />
     <Compile Include="Interfaces\IContabilidadeRepository.cs" />
     <Compile Include="Interfaces\IContaPagarRepository.cs" />
     <Compile Include="Interfaces\IContaReceberRepository.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Repositories\CartaoCreditoRepository.cs" />
     <Compile Include="Repositories\CategoriaRepository.cs" />
     <Compile Include="Repositories\ClienteRepository.cs" />
+    <Compile Include="Repositories\ComprarRepository.cs" />
     <Compile Include="Repositories\ContabilidadeRepository.cs" />
     <Compile Include="Repositories\ContaPagarRepository.cs" />
     <Compile Include="Repositories\ContaReceberRepository.cs" />
