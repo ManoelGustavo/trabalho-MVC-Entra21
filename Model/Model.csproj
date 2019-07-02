@@ -49,6 +49,7 @@
     <Compile Include="ContaPagar.cs" />
     <Compile Include="ContaReceber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

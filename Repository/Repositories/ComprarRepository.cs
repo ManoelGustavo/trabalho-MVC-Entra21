@@ -73,7 +73,7 @@ namespace Repository.Repositories
         {
             SqlCommand comando = Conexao.AbrirConexao();
             comando.CommandText = "SELECT cartoes_credito.id AS 'CartaoCreditoId', cartoes_credito.numero AS 'CartaoCreditoNumero', cartoes_credito.data_vencimento AS 'CartaoCreditoDataVencimento', " +
-                "cartoes_credito.cvv AS 'CartaoCreditoCvv' FROM compras INNER JOIN cartoes_credito ON(compras.id_cartao_credito = cartoes_credito.id)";
+                "cartoes_credito.cvv AS 'CartaoCreditoCvv', compras.id AS 'ComprarId', compras.valor AS 'ComprarValor', comprar.data_compra AS 'ComprarDataCompra' FROM compras INNER JOIN cartoes_credito ON(compras.id_cartao_credito = cartoes_credito.id)";
             DataTable tabela = new DataTable();
             tabela.Load(comando.ExecuteReader());
             comando.Connection.Close();

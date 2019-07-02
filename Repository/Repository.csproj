@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\IContabilidadeRepository.cs" />
     <Compile Include="Interfaces\IContaPagarRepository.cs" />
     <Compile Include="Interfaces\IContaReceberRepository.cs" />
+    <Compile Include="Interfaces\IUsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CartaoCreditoRepository.cs" />
     <Compile Include="Repositories\CategoriaRepository.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Repositories\ContabilidadeRepository.cs" />
     <Compile Include="Repositories\ContaPagarRepository.cs" />
     <Compile Include="Repositories\ContaReceberRepository.cs" />
+    <Compile Include="Repositories\UsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
