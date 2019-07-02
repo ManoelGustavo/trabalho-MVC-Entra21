@@ -1891,6 +1891,7 @@
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\ContabilidadeController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\ContaReceberController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1926,7 +1927,6 @@
     <Folder Include="Views\CartaoCredito\" />
     <Folder Include="Views\Cliente\" />
     <Folder Include="Views\Contabilidade\" />
-    <Folder Include="Views\ContaReceber\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
