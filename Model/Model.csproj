@@ -46,6 +46,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Contabilidade.cs" />
     <Compile Include="ContaPagar.cs" />
+    <Compile Include="ContaReceber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
