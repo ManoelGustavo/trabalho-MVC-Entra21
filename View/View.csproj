@@ -1893,6 +1893,7 @@
     <Compile Include="Controllers\ContabilidadeController.cs" />
     <Compile Include="Controllers\ContaPagarController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\ContaReceberController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
