@@ -90,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="contabilidade.ico" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -1925,12 +1926,6 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Categoria\Index.cshtml" />
-    <Content Include="Views\CartaoCredito\Index.cshtml" />
-    <Content Include="Views\Cliente\Index.cshtml" />
-    <Content Include="Views\Comprar\Index.cshtml" />
-    <Content Include="Views\Contabilidade\Index.cshtml" />
-    <Content Include="Views\ContaPagar\Index.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Usuario\Cadastro.cshtml" />
     <Content Include="Views\ContaPagar\Cadastro.cshtml" />
@@ -1939,6 +1934,12 @@
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Categoria\Cadastro.cshtml" />
     <Content Include="Views\CartaoCredito\Cadastro.cshtml" />
+    <Content Include="Views\ContaPagar\Index.cshtml" />
+    <Content Include="Views\Contabilidade\Index.cshtml" />
+    <Content Include="Views\Comprar\Index.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Categoria\Index.cshtml" />
+    <Content Include="Views\CartaoCredito\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1948,12 +1949,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Views\CartaoCredito\" />
-    <Folder Include="Views\Cliente\" />
-    <Folder Include="Views\Comprar\" />
-    <Folder Include="Views\Contabilidade\" />
-    <Folder Include="Views\ContaPagar\" />
-    <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
