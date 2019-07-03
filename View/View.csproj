@@ -1936,7 +1936,7 @@
     <Content Include="Views\Usuario\Cadastro.cshtml" />
     <Content Include="Views\ContaPagar\Cadastro.cshtml" />
     <Content Include="Views\Contabilidade\Cadastro.cshtml" />
-    <Content Include="Views\Comprar\Cadastrar.cshtml" />
+    <Content Include="Views\Comprar\Cadastro.cshtml" />
     <Content Include="Views\Cliente\Cadastro.cshtml" />
     <Content Include="Views\Categoria\Cadastro.cshtml" />
     <Content Include="Views\CartaoCredito\Cadastro.cshtml" />
