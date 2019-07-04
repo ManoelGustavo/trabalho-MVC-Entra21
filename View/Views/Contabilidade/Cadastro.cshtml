@@ -39,19 +39,19 @@
         <div class="card card-register mx-auto mt-5">
             <div  class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/calculator.png"></i> Registro de contabilidade</div>
             <div class="card-body">
-                <form action="@Url.Action("Store")">
+                <form action="@Url.Action("Store")" method="post">
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <input type="text" id="nomeContabilidade" class="form-control" placeholder="Nome contabilidade" required="required" autofocus="autofocus">
+                                    <input type="text" id="nomeContabilidade" class="form-control" placeholder="Nome contabilidade" required="required" autofocus="autofocus" name="nome" >
                                     <label for="firstName">Nome da Contabilidade</label>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <a class="btn btn-primary btn-block" href="@Url.Action("Index")">Registrar</a>
+                    <button class="btn btn-success col-md-12" type="submit">  Registrar</button>
                     
                 </form>
                 <div class="text-center">
