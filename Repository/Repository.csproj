@@ -51,6 +51,9 @@
     <Compile Include="Interfaces\IContaPagarRepository.cs" />
     <Compile Include="Interfaces\IContaReceberRepository.cs" />
     <Compile Include="Interfaces\IUsuarioRepository.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CartaoCreditoRepository.cs" />
     <Compile Include="Repositories\CategoriaRepository.cs" />
@@ -62,12 +65,22 @@
     <Compile Include="Repositories\UsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="obj\Debug\Repository.csproj.CopyComplete" />
+    <None Include="obj\Debug\Repository.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Repository.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Repository.dll" />
+    <Content Include="bin\Debug\Repository.pdb" />
     <Content Include="DataBase\Estrutura.sql" />
+    <Content Include="obj\Debug\Repository.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Repository.dll" />
+    <Content Include="obj\Debug\Repository.pdb" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{f7f57ce7-c05e-45e3-9ca2-466167efc8fe}</Project>
