@@ -47,22 +47,43 @@
                     <table class="table table-bordered" id="dataTable" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Código</th>
+                                <th>Cliente</th>
+                                <th>Numero do Cartão</th>
+                                <th>Data Vencimento</th>
+                                <th>CVV</th>
+                                <th>Ação</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            @foreach (Model.CartaoCredito cartaoCredito in ViewBag.CartoesCredito)
+                            {
+                                <tr>
+                                    <td>@cartaoCredito.Id</td>
+                                    <td>@cartaoCredito.Cliente.Nome</td>
+                                    <td>@cartaoCredito.Numero</td>
+                                    <td>@cartaoCredito.DataVencimento</td>
+                                    <td>@cartaoCredito.Cvv</td>
+                                    <td>
+
+                                        <a href="@Url.Action("Editar", new { id = cartaoCredito.Id })" class="btn btn-outline-primary">
+                                        <i class="fas fa-pen"></i> Editar</a>
+
+                                        <a href="@Url.Action("Apagar", new { id = cartaoCredito.Id })" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash"></i> Apagar</a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
                         <tfoot>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Código</th>
+                                <th>Cliente</th>
+                                <th>Numero do Cartão</th>
+                                <th>Data Vencimento</th>
+                                <th>CVV</th>
+                                <th>Ação</th>
                             </tr>
                         </tfoot>
                     </table>
