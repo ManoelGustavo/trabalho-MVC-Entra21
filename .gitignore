@@ -210,3 +210,6 @@ project.lock.json
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
+Repository/DataBase/Estrutura.sql
+View/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+View/obj/Debug/View.csprojAssemblyReference.cache
