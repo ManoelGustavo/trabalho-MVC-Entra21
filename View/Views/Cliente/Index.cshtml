@@ -1,6 +1,8 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+                /**/
+
+                ViewBag.Title = "Index";
 }
 
 <div id="wrapper">
@@ -56,15 +58,15 @@
                         <tbody>
                             @foreach (Model.Cliente cliente in ViewBag.Clientes)
                             {
-                            <tr>
-                                <td>@cliente.Id</td>
-                                <td>@cliente.Nome</td>
-                                <td>@cliente.Cpf</td>
-                                <td>
-                                    <a href="@Url.Action("Editar", new { id = cliente.Id })" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar</a>
-                                    <a href="@Url.Action("Apagar", new { id = cliente.Id })" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Apagar</a>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>@cliente.Id</td>
+                                    <td>@cliente.Nome</td>
+                                    <td>@cliente.Cpf</td>
+                                    <td>
+                                        <a href="@Url.Action("Editar", new { id = cliente.Id })" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar</a>
+                                        <a href="@Url.Action("Apagar", new { id = cliente.Id })" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Apagar</a>
+                                    </td>
+                                </tr>
                             }
                         </tbody>
                         <tfoot>

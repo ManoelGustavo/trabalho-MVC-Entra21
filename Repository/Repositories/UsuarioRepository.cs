@@ -75,8 +75,15 @@ namespace Repository.Repositories
         public List<Usuario> ObterTodos()
         {
             SqlCommand comando = Conexao.AbrirConexao();
-            comando.CommandText = "SELECT contabilidades.id AS 'ContabilidadeId', contabilidades.nome AS 'ContabilidadeNome', usuarios.id AS 'UsuarioId', usuarios.login AS 'UsuarioLogin', " +
-                "usuarios.senha AS 'UsuarioSenha', usuarios.data_nascimento AS 'UsuarioDataNascimento' FROM usuarios INNER JOIN contabilidades ON(usuarios.id_contabilidade = contabilidades.id)";
+            comando.CommandText = @"SELECT 
+contabilidades.id AS 'ContabilidadeId',
+contabilidades.nome AS 'ContabilidadeNome', 
+usuarios.id AS 'UsuarioId', 
+usuarios.login AS 'UsuarioLogin',
+usuarios.senha AS 'UsuarioSenha',
+usuarios.data_nascimento AS 'UsuarioDataNascimento'
+FROM usuarios
+INNER JOIN contabilidades ON(usuarios.id_contabilidade = contabilidades.id)";
             DataTable tabela = new DataTable();
             tabela.Load(comando.ExecuteReader());
             comando.Connection.Close();

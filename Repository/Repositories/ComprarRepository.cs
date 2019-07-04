@@ -72,8 +72,21 @@ namespace Repository.Repositories
         public List<Comprar> ObterTodos()
         {
             SqlCommand comando = Conexao.AbrirConexao();
-            comando.CommandText = "SELECT cartoes_credito.id AS 'CartaoCreditoId', cartoes_credito.numero AS 'CartaoCreditoNumero', cartoes_credito.data_vencimento AS 'CartaoCreditoDataVencimento', " +
-                "cartoes_credito.cvv AS 'CartaoCreditoCvv', compras.id AS 'ComprarId', compras.valor AS 'ComprarValor', comprar.data_compra AS 'ComprarDataCompra' FROM compras INNER JOIN cartoes_credito ON(compras.id_cartao_credito = cartoes_credito.id)";
+            comando.CommandText = @"SELECT 
+cartoes_credito.id AS 'CartaoCreditoId', 
+cartoes_credito.numero AS 'CartaoCreditoNumero', 
+cartoes_credito.data_vencimento AS 'CartaoCreditoDataVencimento',
+cartoes_credito.cvv AS 'CartaoCreditoCvv', 
+compras.id AS 'ComprarId', 
+compras.valor AS 'ComprarValor', 
+compras.data_compra AS 'ComprarDataCompra',
+clientes.id AS 'ClienteId',
+clientes.Nome AS 'ClienteNome',
+clientes.Cpf AS 'ClienteCpf'
+FROM compras 
+INNER JOIN cartoes_credito ON(compras.id_cartao_credito = cartoes_credito.id)
+INNER JOIN clientes ON(cartoes_credito.id_cliente = clientes.id)
+";
             DataTable tabela = new DataTable();
             tabela.Load(comando.ExecuteReader());
             comando.Connection.Close();
@@ -85,12 +98,18 @@ namespace Repository.Repositories
                 comprar.Id = Convert.ToInt32(linha["id"]);
                 comprar.Valor = Convert.ToDecimal(linha["valor"]);
                 comprar.DataCompra = Convert.ToDateTime(linha["data_compra"]);
-                comprar.IdCartaoCredito = Convert.ToInt32(linha["CartaoCreditoId"]);
+
                 comprar.CartaoCredito = new CartaoCredito();
+                comprar.IdCartaoCredito = Convert.ToInt32(linha["CartaoCreditoId"]);
                 comprar.CartaoCredito.Id = Convert.ToInt32(linha["CartaoCreditoId"]);
                 comprar.CartaoCredito.Numero = linha["CartaoCreditoNumero"].ToString();
                 comprar.CartaoCredito.DataVencimento = Convert.ToDateTime(linha["CartaoCreditoDataVencimento"]);
                 comprar.CartaoCredito.Cvv = linha["CartaoCreditoCvv"].ToString();
+
+                comprar.CartaoCredito.Cliente = new Cliente();
+                comprar.CartaoCredito.Cliente.Id = Convert.ToInt32(linha["ClienteId"]);
+                comprar.CartaoCredito.Cliente.Nome = linha["ClienteNome"].ToString();
+                comprar.CartaoCredito.Cliente.Cpf = linha["ClienteCpf"].ToString();
                 compras.Add(comprar);
             }
             return compras;

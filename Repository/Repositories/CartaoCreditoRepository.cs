@@ -93,12 +93,12 @@ VALUES (@NUMERO, @DATA_VENCIMENTO, @CVV, @ID_CLIENTE)";
             comando.CommandText = @"SELECT
 clientes.id AS 'ClienteId',
 clientes.nome AS 'ClienteNome',
-clientes.cpf AS 'ClienteCpf'
+clientes.cpf AS 'ClienteCpf',
 cartoes_credito.numero AS 'Numero',
 cartoes_credito.data_vencimento AS 'DataVencimento',
 cartoes_credito.cvv AS 'Cvv'
 FROM cartoes_credito
-INNER JOIN cartoes_credito ON (cartoes_credito.id_cliente = clientes.id)";
+INNER JOIN clientes ON (cartoes_credito.id_cliente = clientes.id)";
 
             DataTable table = new DataTable();
             table.Load(comando.ExecuteReader());
@@ -113,7 +113,7 @@ INNER JOIN cartoes_credito ON (cartoes_credito.id_cliente = clientes.id)";
                 cartaoCredito.DataVencimento = Convert.ToDateTime(row["data_vencimento"]);
                 cartaoCredito.Cvv = row["cvv"].ToString();
                 cartaoCredito.Id = Convert.ToInt32(row["id"]);
-                cartaoCredito.IdCliente = Convert.ToInt32(row["id_cliente"]);
+                cartaoCredito.IdCliente = Convert.ToInt32(row["ClienteId"]);
 
                 cartaoCredito.Cliente = new Cliente();
                 cartaoCredito.Cliente.Id = Convert.ToInt32(row["ClienteId"]);
