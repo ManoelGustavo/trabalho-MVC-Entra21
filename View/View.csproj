@@ -1900,6 +1900,7 @@
     <Compile Include="Controllers\ComprarController.cs" />
     <Compile Include="Controllers\ContabilidadeController.cs" />
     <Compile Include="Controllers\ContaPagarController.cs" />
+    <Compile Include="Controllers\PrincipalController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\ContaReceberController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1941,6 +1942,7 @@
     <Content Include="Views\CartaoCredito\Index.cshtml" />
     <Content Include="Views\ContaReceber\Index.cshtml" />
     <Content Include="Views\ContaReceber\Cadastro.cshtml" />
+    <Content Include="Views\Principal\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
