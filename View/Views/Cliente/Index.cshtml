@@ -40,29 +40,39 @@
         <div class="card mb-3">
             <div class="card-header">
                 <i class="fas fa-table"></i>
-                Data Table Example
+                Clientes
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" cellspacing="0">
+                    <table class="table table-bordered table-dark" id="dataTable" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Código</th>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Ação</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            @foreach (Model.Cliente cliente in ViewBag.Clientes)
+                            {
+                            <tr>
+                                <td>@cliente.Id</td>
+                                <td>@cliente.Nome</td>
+                                <td>@cliente.Cpf</td>
+                                <td>
+                                    <a href="@Url.Action("Editar", new { id = cliente.Id })" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar</a>
+                                    <a href="@Url.Action("Apagar", new { id = cliente.Id })" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Apagar</a>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
                         <tfoot>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Código</th>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Ação</th>
                             </tr>
                         </tfoot>
                     </table>
