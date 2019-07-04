@@ -40,29 +40,50 @@
         <div class="card mb-3">
             <div class="card-header">
                 <i class="fas fa-table"></i>
-                Data Table Example
+                Contas a Pagar
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" cellspacing="0">
+                    <table class="table table-bordered table-dark" id="dataTable" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Código</th>
+                                <th>Nome</th>
+                                <th>Data Vencimento</th>
+                                <th>Data Pagamento</th>
+                                <th>Valor</th>
+                                <th>Ação</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            @foreach(Model.ContaPagar contaPagar in ViewBag.ContasPagar)
+                            {
+                                <tr>
+                                    <td>@contaPagar.Id</td>
+                                    <td>@contaPagar.Nome</td>
+                                    <td>@contaPagar.DataVencimento</td>
+                                    <td>@contaPagar.DataPagamento</td>
+                                    <td>@contaPagar.Valor</td>
+                                    <td>
+
+                                        <a href="@Url.Action("Editar", new { id = contaPagar.Id })" class="btn btn-outline-primary">
+                                        <i class="fas fa-pen"></i> Editar</a>
+
+                                        <a href="@Url.Action("Apagar", new { id = contaPagar.Id })" class="btn btn-outline-dark">
+                                        <i class="fas fa-trash"></i> Apagar</a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
                         <tfoot>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Código</th>
+                                <th>Nome</th>
+                                <th>Data Vencimento</th>
+                                <th>Data Pagamento</th>
+                                <th>Valor</th>
+                                <th>Ação</th>
                             </tr>
                         </tfoot>
                     </table>
