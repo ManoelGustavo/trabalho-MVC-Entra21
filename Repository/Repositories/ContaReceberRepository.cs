@@ -79,9 +79,18 @@ namespace Repository.Repositories
         public List<ContaReceber> ObterTodos(string pesquisa)
         {
             SqlCommand comando = Conexao.AbrirConexao();
-            comando.CommandText = "SELECT clientes.id AS 'ClienteId', clientes.nome AS 'ClienteNome', clientes.cpf AS 'ClienteCpf', categorias.id AS 'CategoriaId', " +
-                "categorias.nome AS 'CategoriaNome', contas_receber.id AS 'Id', contas_receber.nome AS 'Nome', contas_receber.data_pagamento AS 'DataPagamento', " +
-                "contas_receber.valor AS 'Valor' FROM contas_receber INNER JOIN clientes ON(contas_receber.id_cliente = clientes.id) INNER JOIN categorias ON(contas_receber.id_categoria = categorias.id)";
+            comando.CommandText = @"SELECT clientes.id AS 'ClienteId', 
+clientes.nome AS 'ClienteNome', 
+clientes.cpf AS 'ClienteCpf', 
+categorias.id AS 'CategoriaId',
+categorias.nome AS 'CategoriaNome', 
+contas_receber.id AS 'Id', 
+contas_receber.nome AS 'Nome', 
+contas_receber.data_pagamento AS 'DataPagamento',
+contas_receber.valor AS 'Valor' 
+FROM contas_receber 
+INNER JOIN clientes ON(contas_receber.id_cliente = clientes.id) 
+INNER JOIN categorias ON(contas_receber.id_categoria = categorias.id)";
             DataTable tabela = new DataTable();
             tabela.Load(comando.ExecuteReader());
             comando.Connection.Close();
