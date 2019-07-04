@@ -40,29 +40,47 @@
         <div class="card mb-3">
             <div class="card-header">
                 <i class="fas fa-table"></i>
-                Data Table Example
+                Usuários
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" cellspacing="0">
+                    <table class="table table-bordered table-dark" id="dataTable" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Código</th>
+                                <th>Login</th>
+                                <th>Senha</th>
+                                <th>Data Nascimento</th>
+                                <th>Ação</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            @foreach(Model.Usuario usuario in ViewBag.Usuarios)
+                            {
+                                <tr>
+                                    <td>@usuario.Id</td>
+                                    <td>@usuario.Login</td>
+                                    <td>@usuario.Senha</td>
+                                    <td>@usuario.DataNascimento</td>
+                                    <td>
+
+                                        <a href="@Url.Action("Editar", new { id = usuario.Id })" class="btn btn-outline-primary">
+                                        <i class="fas fa-pen"></i> Editar</a>
+
+                                        <a href="@Url.Action("Apagar", new { id = usuario.Id })" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash"></i> Apagar</a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
                         <tfoot>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Código</th>
+                                <th>Login</th>
+                                <th>Senha</th>
+                                <th>Data Nascimento</th>
+                                <th>Ação</th>
                             </tr>
                         </tfoot>
                     </table>
