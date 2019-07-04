@@ -48,6 +48,8 @@
                         <thead>
                             <tr>
                                 <th>Código</th>
+                                <th>Cliente</th>
+                                <th>Categoria</th>
                                 <th>Nome</th>
                                 <th>Data Vencimento</th>
                                 <th>Data Pagamento</th>
@@ -60,6 +62,8 @@
                             {
                                 <tr>
                                     <td>@contaPagar.Id</td>
+                                    <td>@contaPagar.Cliente.Nome</td>
+                                    <td>@contaPagar.Categoria.Nome</td>
                                     <td>@contaPagar.Nome</td>
                                     <td>@contaPagar.DataVencimento</td>
                                     <td>@contaPagar.DataPagamento</td>
@@ -79,6 +83,8 @@
                         <tfoot>
                             <tr>
                                 <th>Código</th>
+                                <th>Cliente</th>
+                                <th>Categoria</th>
                                 <th>Nome</th>
                                 <th>Data Vencimento</th>
                                 <th>Data Pagamento</th>
