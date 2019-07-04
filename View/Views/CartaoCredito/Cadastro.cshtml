@@ -35,5 +35,64 @@
             </a>
         </li>
     </ul>
+    <div class="container">
+        <div class="card card-register mx-auto mt-4">
+            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/insert-card.png"></i> Registro de cartão de crédito</div>
+            <div class="card-body">
+                <form action="@Url.Action("Store")">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <input type="text" id="numeroCartao" class="form-control" placeholder="Numero cartao" required="required" autofocus="autofocus">
+                                    <label for="numeroCartao">Número</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <input type="text" id="cvv" class="form-control" placeholder="cvv cartao" required="required" autofocus="autofocus">
+                                    <label for="cvv">CVV</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <select id="campo-categoria" name="idCliente" class="form-control" required="required">
+
+                                        <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome do cliente</option>
+
+                                        @foreach (Model.Cliente cliente in ViewBag.Clientes)
+                                        {
+                                            <option value="@cliente">@cliente.Nome </option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12 ">
+                                <label for="data_nascimento">Data Vencimento</label>
+                                <input class="form-control" type="date" id="data_vencimento" name="data_vencimento" placeholder="data Vencimento" required="required" autofocus="autofocus">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary btn-block" href="@Url.Action("Index")">Registrar</a>
+
+                </form>
+                <div class="text-center">
+                    <a class="d-block small mt-3" href="#">Deseja editar algum cartão já cadastrado ?</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
