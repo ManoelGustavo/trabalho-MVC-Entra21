@@ -1945,7 +1945,6 @@
     <Content Include="Views\CartaoCredito\Index.cshtml" />
     <Content Include="Views\ContaReceber\Index.cshtml" />
     <Content Include="Views\ContaReceber\Cadastro.cshtml" />
-    <Content Include="Views\Principal\Index.cshtml" />
     <Content Include="Views\CartaoCredito\Editar.cshtml" />
     <Content Include="Views\Categoria\Editar.cshtml" />
     <Content Include="Views\Usuario\Editar.cshtml" />
@@ -1954,6 +1953,7 @@
     <Content Include="Views\Contabilidade\Editar.cshtml" />
     <Content Include="Views\Comprar\Editar.cshtml" />
     <Content Include="Views\Cliente\Editar.cshtml" />
+    <Content Include="Views\Principal\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
