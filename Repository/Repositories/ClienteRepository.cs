@@ -107,7 +107,7 @@ INNER JOIN contabilidades ON (clientes.id_contabilidade = contabilidades.id)";
                 cliente.Nome = row["nome"].ToString();
                 cliente.Cpf = row["cpf"].ToString();
                 cliente.Id = Convert.ToInt32(row["id"]);
-                cliente.IdContabilidade = Convert.ToInt32(row["id_contabilidade"]);
+                cliente.IdContabilidade = Convert.ToInt32(row["ContabilidadeId"]);
 
                 cliente.Contabilidade = new Contabilidade();
                 cliente.Contabilidade.Id = Convert.ToInt32(row["ContabilidadeId"]);
