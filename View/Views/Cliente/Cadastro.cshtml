@@ -16,7 +16,7 @@
                 <span>Listas</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuarios</a>
+                <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")">Usuarios</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"ContaPagar")">Contas a pagar</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"Categoria")">Categorias</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"Cliente")">Clientes</a>
@@ -44,8 +44,8 @@
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <input type="text" id="Nome" class="form-control" placeholder="Nome" required="required" autofocus="autofocus">
-                                    <label for="Nome">Nome</label>
+                                    <input type="text" id="nome" class="form-control" placeholder="nome" required="required" autofocus="autofocus" name="nome">
+                                    <label for="nome">Nome</label>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                             <div class="col-md-12 ">
                                 <div class="form-label-group">
                                     <label for="cpf">CPF</label>
-                                    <input type="text" id="cpf" class="form-control" placeholder="cpf" required="required" autofocus="autofocus">
+                                    <input type="text" id="cpf" class="form-control" placeholder="cpf" required="required" autofocus="autofocus" name="cpf">
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
 
                                         @foreach (Model.Contabilidade contabilidade in ViewBag.Contabilidades)
                                         {
-                                            <option value="@contabilidade">@contabilidade.Nome </option>
+                                            <option value="@contabilidade.Id">@contabilidade.Nome</option>
                                         }
                                     </select>
                                 </div>

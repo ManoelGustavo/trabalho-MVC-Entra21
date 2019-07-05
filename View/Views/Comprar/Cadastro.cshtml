@@ -39,12 +39,12 @@
         <div class="card card-register mx-auto mt-4">
             <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/shopping-cart.png"></i> Registro de compras</div>
             <div class="card-body">
-                <form action="@Url.Action("Store")">
+                <form action="@Url.Action("Store")" method="post">
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <input type="text" id="valorCompra" class="form-control" placeholder="Valor Compra" required="required" autofocus="autofocus">
+                                    <input type="text" id="valorCompra" class="form-control" placeholder="Valor Compra" required="required" autofocus="autofocus" name="valor">
                                     <label for="valorCompra">Valor</label>
                                 </div>
                             </div>
@@ -55,12 +55,10 @@
                             <div class="col-md-12">
                                 <div class="form-label-group">
                                     <select id="campo-categoria" name="idCliente" class="form-control" required="required">
-
-                                        <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome do cliente</option>
-
-                                        @foreach (Model.CartaoCredito cartao in ViewBag.CartaoCredito)
+                                        <option disabled="disabled" placeholder="" selected="selected">Selecione o nome do cliente</option>
+                                        @foreach (Model.Cliente cliente in ViewBag.Clientes)
                                         {
-                                            <option value="@cartao">@cartao.Id </option>
+                                            <option value="@cliente.Id">@cliente.Nome</option>
                                         }
                                     </select>
                                 </div>

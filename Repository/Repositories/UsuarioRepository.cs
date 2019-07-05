@@ -72,7 +72,7 @@ namespace Repository.Repositories
             return usuario;
         }
 
-        public List<Usuario> ObterTodos()
+        public List<Usuario> ObterTodos(string pesquisa)
         {
             SqlCommand comando = Conexao.AbrirConexao();
             comando.CommandText = @"SELECT 
@@ -92,10 +92,10 @@ INNER JOIN contabilidades ON(usuarios.id_contabilidade = contabilidades.id)";
             {
                 DataRow linha = tabela.Rows[i];
                 Usuario usuario = new Usuario();
-                usuario.Id = Convert.ToInt32(linha["id"]);
-                usuario.Login = linha["login"].ToString();
-                usuario.Senha = linha["senha"].ToString();
-                usuario.DataNascimento = Convert.ToDateTime(linha["data_nascimento"]);
+                usuario.Id = Convert.ToInt32(linha["UsuarioId"]);
+                usuario.Login = linha["UsuarioLogin"].ToString();
+                usuario.Senha = linha["UsuarioSenha"].ToString();
+                usuario.DataNascimento = Convert.ToDateTime(linha["UsuarioDataNascimento"]);
                 usuario.IdContabilidade = Convert.ToInt32(linha["ContabilidadeId"]);
                 usuario.Contabilidade = new Contabilidade();
                 usuario.Contabilidade.Id = Convert.ToInt32(linha["ContabilidadeId"]);

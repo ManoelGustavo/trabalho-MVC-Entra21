@@ -20,7 +20,7 @@ namespace View.Controllers
         // GET: Usuario
         public ActionResult Index()
         {
-            List<Usuario> usuarios = repository.ObterTodos();
+            List<Usuario> usuarios = repository.ObterTodos("");
             ViewBag.Usuarios = usuarios;
             return View();
         }
