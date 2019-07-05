@@ -1703,6 +1703,8 @@
     <Content Include="Content\js\sb-admin.min.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="resrc\js\exceptionhero.js" />
+    <Content Include="resrc\js\exceptionhero.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
