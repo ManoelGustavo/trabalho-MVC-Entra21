@@ -44,7 +44,7 @@
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <div class="form-label-group">
-                                        <input type="text" id="login" class="form-control" placeholder="Login" required="required">
+                                        <input type="text" id="login" class="form-control" placeholder="Login" required="required" name="login">
                                         <label for="login">Login</label>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                             <div class="form-row">
                                 <div class="col-md-12 ">
                                     <div class="form-label-group">
-                                        <input type="text" id="senha" class="form-control" placeholder="Senha" required="required">
+                                        <input type="text" id="senha" class="form-control" placeholder="Senha" required="required" name="senha">
                                         <label for="senha">Senha</label>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                             <div class="form-row">
                                 <div class="col-md-12 ">
                                     <label for="data_nascimento">Data Nascimento</label>
-                                    <input class="form-control" type="date" id="data_nascimento" name="data_nascimento" placeholder="data_nascimento" required="required" autofocus="autofocus">
+                                    <input class="form-control" type="datetime" id="data_nascimento" name="data_nascimento" placeholder="data_nascimento" required="required" autofocus="autofocus">
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
 
                                             @foreach (Model.Contabilidade contabilidade in ViewBag.Contabilidades)
                                             {
-                                                <option value="@contabilidade">@contabilidade.Nome </option>
+                                                <option value="@contabilidade.Id">@contabilidade.Nome </option>
                                             }
                                         </select>
                                     </div>

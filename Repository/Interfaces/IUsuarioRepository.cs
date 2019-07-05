@@ -12,7 +12,7 @@ namespace Repository.Interfaces
         int Inserir(Usuario usuario);
         bool Atualizar(Usuario usuario);
         bool Apagar(int id);
-        List<Usuario> ObterTodos();
+        List<Usuario> ObterTodos(string pesquisar);
         Usuario ObterPeloId(int id);
     }
 }
