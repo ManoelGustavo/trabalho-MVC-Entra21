@@ -94,6 +94,7 @@ VALUES (@NUMERO, @DATA_VENCIMENTO, @CVV, @ID_CLIENTE)";
 clientes.id AS 'ClienteId',
 clientes.nome AS 'ClienteNome',
 clientes.cpf AS 'ClienteCpf',
+cartoes_credito.id AS 'Id',
 cartoes_credito.numero AS 'Numero',
 cartoes_credito.data_vencimento AS 'DataVencimento',
 cartoes_credito.cvv AS 'Cvv'
@@ -109,10 +110,10 @@ INNER JOIN clientes ON (cartoes_credito.id_cliente = clientes.id)";
             foreach(DataRow row in table.Rows)
             {
                 CartaoCredito cartaoCredito = new CartaoCredito();
-                cartaoCredito.Numero = row["numero"].ToString();
-                cartaoCredito.DataVencimento = Convert.ToDateTime(row["data_vencimento"]);
-                cartaoCredito.Cvv = row["cvv"].ToString();
-                cartaoCredito.Id = Convert.ToInt32(row["id"]);
+                cartaoCredito.Id = Convert.ToInt32(row["Id"]);
+                cartaoCredito.Numero = row["Numero"].ToString();
+                cartaoCredito.DataVencimento = Convert.ToDateTime(row["DataVencimento"]);
+                cartaoCredito.Cvv = row["Cvv"].ToString();
                 cartaoCredito.IdCliente = Convert.ToInt32(row["ClienteId"]);
 
                 cartaoCredito.Cliente = new Cliente();

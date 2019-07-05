@@ -54,8 +54,8 @@
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <select id="campo-categoria" name="idCliente" class="form-control" required="required">
-                                        <option disabled="disabled" placeholder="" selected="selected">Selecione o nome do cliente</option>
+                                    <select id="campo-categoria" name="idClinte" class="form-control" required="required">
+                                        <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome do cliente</option>
                                         @foreach (Model.Cliente cliente in ViewBag.Clientes)
                                         {
                                             <option value="@cliente.Id">@cliente.Nome</option>

@@ -39,7 +39,7 @@
             <div class="card card-register mx-auto mt-4">
                 <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/checked-user-male.png"></i> Registro de Cliente</div>
                 <div class="card-body">
-                    <form action="@Url.Action("Store")">
+                    <form action="@Url.Action("Store")" method="post">
                         <div class="form-group">
                             <div class="form-row">
                                 <div class="col-md-12">
@@ -73,9 +73,7 @@
                                 <div class="col-md-12">
                                     <div class="form-label-group">
                                         <select id="campo-categoria" name="idContabilidade" class="form-control" required="required">
-
                                             <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome da Contabilidade</option>
-
                                             @foreach (Model.Contabilidade contabilidade in ViewBag.Contabilidades)
                                             {
                                                 <option value="@contabilidade.Id">@contabilidade.Nome </option>
@@ -85,7 +83,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <button class="btn btn-success col-md-12" type="submit">Registrar</button>
                     </form>
                     <div class="text-center">
