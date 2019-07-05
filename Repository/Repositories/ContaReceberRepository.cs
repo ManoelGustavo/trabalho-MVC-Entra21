@@ -99,10 +99,10 @@ INNER JOIN categorias ON(contas_receber.id_categoria = categorias.id)";
             {
                 DataRow linha = tabela.Rows[i];
                 ContaReceber contaReceber = new ContaReceber();
-                contaReceber.Id = Convert.ToInt32(linha["id"]);
-                contaReceber.Nome = linha["nome"].ToString();
-                contaReceber.DataPagamento = Convert.ToDateTime(linha["data_pagamento"]);
-                contaReceber.Valor = Convert.ToDecimal(linha["valor"]);
+                contaReceber.Id = Convert.ToInt32(linha["Id"]);
+                contaReceber.Nome = linha["Nome"].ToString();
+                contaReceber.DataPagamento = Convert.ToDateTime(linha["DataPagamento"]);
+                contaReceber.Valor = Convert.ToDecimal(linha["Valor"]);
                 contaReceber.IdCliente = Convert.ToInt32(linha["ClienteId"]);
                 contaReceber.Cliente = new Cliente();
                 contaReceber.Cliente.Id = Convert.ToInt32(linha["ClienteId"]);

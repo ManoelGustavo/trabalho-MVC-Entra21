@@ -103,11 +103,11 @@ INNER JOIN categorias ON(contas_pagar.id_categoria = categorias.id)";
             {
                 DataRow linha = tabela.Rows[i];
                 ContaPagar contaPagar = new ContaPagar();
-                contaPagar.Id = Convert.ToInt32(linha["id"]);
-                contaPagar.Nome = linha["nome"].ToString();
-                contaPagar.DataVencimento = Convert.ToDateTime(linha["data_vencimento"]);
-                contaPagar.DataPagamento = Convert.ToDateTime(linha["data_pagamento"]);
-                contaPagar.Valor = Convert.ToDecimal(linha["valor"]);
+                contaPagar.Id = Convert.ToInt32(linha["Id"]);
+                contaPagar.Nome = linha["Nome"].ToString();
+                contaPagar.DataVencimento = Convert.ToDateTime(linha["DataVencimento"]);
+                contaPagar.DataPagamento = Convert.ToDateTime(linha["DataPagamento"]);
+                contaPagar.Valor = Convert.ToDecimal(linha["Valor"]);
                 contaPagar.IdCliente = Convert.ToInt32(linha["ClienteId"]);
                 contaPagar.Cliente = new Cliente();
                 contaPagar.Cliente.Id = Convert.ToInt32(linha["ClienteId"]);

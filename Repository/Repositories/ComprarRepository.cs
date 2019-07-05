@@ -77,9 +77,9 @@ cartoes_credito.id AS 'CartaoCreditoId',
 cartoes_credito.numero AS 'CartaoCreditoNumero', 
 cartoes_credito.data_vencimento AS 'CartaoCreditoDataVencimento',
 cartoes_credito.cvv AS 'CartaoCreditoCvv', 
-compras.id AS 'ComprarId', 
-compras.valor AS 'ComprarValor', 
-compras.data_compra AS 'ComprarDataCompra',
+compras.id AS 'Id', 
+compras.valor AS 'Valor', 
+compras.data_compra AS 'DataCompra',
 clientes.id AS 'ClienteId',
 clientes.Nome AS 'ClienteNome',
 clientes.Cpf AS 'ClienteCpf'
@@ -95,9 +95,9 @@ INNER JOIN clientes ON(cartoes_credito.id_cliente = clientes.id)
             {
                 DataRow linha = tabela.Rows[i];
                 Comprar comprar = new Comprar();
-                comprar.Id = Convert.ToInt32(linha["id"]);
-                comprar.Valor = Convert.ToDecimal(linha["valor"]);
-                comprar.DataCompra = Convert.ToDateTime(linha["data_compra"]);
+                comprar.Id = Convert.ToInt32(linha["Id"]);
+                comprar.Valor = Convert.ToDecimal(linha["Valor"]);
+                comprar.DataCompra = Convert.ToDateTime(linha["DataCompra"]);
 
                 comprar.CartaoCredito = new CartaoCredito();
                 comprar.IdCartaoCredito = Convert.ToInt32(linha["CartaoCreditoId"]);
