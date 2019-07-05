@@ -19,7 +19,7 @@ CREATE TABLE usuarios(
 	FOREIGN KEY(id_contabilidade) REFERENCES contabilidades(id),
 	login VARCHAR(45) NOT NULL,
 	senha VARCHAR(45) NOT NULL,
-	data_nascimento DATETIME NOT NULL
+	data_nascimento DATETIME2 NOT NULL
 );
 
 CREATE TABLE clientes(
@@ -35,7 +35,7 @@ CREATE TABLE cartoes_credito(
 	id_cliente INT NOT NULL,
 	FOREIGN KEY(id_cliente) REFERENCES clientes(id),
 	numero VARCHAR(45) NOT NULL,
-	data_vencimento DATETIME NOT NULL,
+	data_vencimento DATETIME2 NOT NULL,
 	cvv VARCHAR(45) NOT NULL
 );
 
@@ -44,7 +44,7 @@ CREATE TABLE compras(
 	id_cartao_credito INT NOT NULL,
 	FOREIGN KEY(id_cartao_credito) REFERENCES cartoes_credito(id),
 	valor DECIMAL(8,2) NOT NULL,
-	data_compra DATETIME NOT NULL
+	data_compra DATETIME2 NOT NULL
 );
 
 CREATE TABLE categorias(
@@ -59,8 +59,8 @@ CREATE TABLE contas_pagar(
 	id_categoria INT NOT NULL,
 	FOREIGN KEY(id_categoria) REFERENCES categorias(id),
 	nome VARCHAR(45) NOT NULL,
-	data_vencimento DATETIME NOT NULL,
-	data_pagamento DATETIME NOT NULL,
+	data_vencimento DATETIME2 NOT NULL,
+	data_pagamento DATETIME2 NOT NULL,
 	valor DECIMAL(8,2) NOT NULL
 );
 
