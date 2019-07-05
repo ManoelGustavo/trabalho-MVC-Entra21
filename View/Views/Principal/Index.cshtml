@@ -3,5 +3,37 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i><img src="https://img.icons8.com/nolan/40/000000/fund-accounting.png"></i>
+                    <span>Principal</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i><img src="https://img.icons8.com/nolan/40/000000/cashbook.png"></i>
+                    <span>Listas</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuarios</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"ContaPagar")">Contas a pagar</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Categoria")">Categorias</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Cliente")">Clientes</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"ContaReceber")">Contas a Receber</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"CartaoCredito")">Cartões de Crédito</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Comprar")">Compras</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Contabilidade")">Contabilidade</a>
+                </div>
 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Cadastro")">
+                    <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
+                    <span>Cadastrar Categoria</span>
+                </a>
+            </li>
+        </ul>
+    </div>
