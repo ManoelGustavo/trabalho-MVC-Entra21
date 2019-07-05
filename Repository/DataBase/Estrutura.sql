@@ -74,4 +74,3 @@ CREATE TABLE contas_receber(
 	data_pagamento DATETIME NOT NULL,
 	valor DECIMAL(8,2) NOT NULL
 );
-SELECT * FROM contabilidades
