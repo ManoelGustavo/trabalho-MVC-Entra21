@@ -1,10 +1,4 @@
-﻿
-@{
-    ViewBag.Title = "Cadastro";
-}
-
-
-@{
+﻿@{
     ViewBag.Title = "Cadastro";
 }
     <div id="wrapper">
@@ -63,9 +57,9 @@
 
                                             <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome do cliente</option>
 
-                                            @foreach (Model.Cliente cliente in ViewBag.Cliente)
+                                            @foreach (Model.Cliente cliente in ViewBag.Clientes)
                                             {
-                                                <option value="@cliente">@cliente.Nome </option>
+                                                <option value="@cliente.Id">@cliente.Nome</option>
                                             }
                                         </select>
                                     </div>
@@ -80,9 +74,9 @@
 
                                             <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome da Categoria</option>
 
-                                            @foreach (Model.Categoria categoria in ViewBag.Categoria)
+                                            @foreach (Model.Categoria categoria in ViewBag.Categorias)
                                             {
-                                                <option value="@categoria">@categoria.Nome </option>
+                                                <option value="@categoria.Id">@categoria.Nome </option>
                                             }
                                         </select>
                                     </div>
