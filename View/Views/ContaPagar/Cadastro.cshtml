@@ -37,7 +37,7 @@
         </ul>
         <div class="container">
             <div class="card card-register mx-auto mt-4">
-                <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/shopping-cart.png"></i> Registro de contas a pagar</div>
+                <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/receipt.png"></i> Registro de contas a pagar</div>
                 <div class="card-body">
                     <form action="@Url.Action("Store")">
                         <div class="form-group">
@@ -97,6 +97,16 @@
                                 <div class="col-md-12 ">
                                     <label for="data_compra">Data Vencimento</label>
                                     <input class="form-control" type="date" id="data_vencimento" name="data_vencimento" placeholder="data_vencimento" required="required" autofocus="autofocus">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="form-label-group">
+                                        <input type="text" id="valor" class="form-control" placeholder="valor" required="required" autofocus="autofocus">
+                                        <label for="valor">Nome</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>

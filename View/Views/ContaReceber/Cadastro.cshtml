@@ -7,37 +7,112 @@
 @{
     ViewBag.Title = "Cadastro";
 }
-<div id="wrapper">
-    <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">
-                <i><img src="https://img.icons8.com/nolan/40/000000/fund-accounting.png"></i>
-                <span>Principal</span>
-            </a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i><img src="https://img.icons8.com/nolan/40/000000/cashbook.png"></i>
-                <span>Listas</span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuarios</a>
-                <a class="dropdown-item" href="@Url.Action("Index" ,"ContaPagar")">Contas a pagar</a>
-                <a class="dropdown-item" href="@Url.Action("Index" ,"Categoria")">Categorias</a>
-                <a class="dropdown-item" href="@Url.Action("Index" ,"Cliente")">Clientes</a>
-                <a class="dropdown-item" href="@Url.Action("Index" ,"ContaReceber")">Contas a Receber</a>
-                <a class="dropdown-item" href="@Url.Action("Index" ,"CartaoCredito")">Cartões de Crédito</a>
-                <a class="dropdown-item" href="@Url.Action("Index" ,"Comprar")">Compras</a>
-                <a class="dropdown-item" href="@Url.Action("Index" ,"Contabilidade")">Contabilidade</a>
-            </div>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i><img src="https://img.icons8.com/nolan/40/000000/fund-accounting.png"></i>
+                    <span>Principal</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i><img src="https://img.icons8.com/nolan/40/000000/cashbook.png"></i>
+                    <span>Listas</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuarios</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"ContaPagar")">Contas a pagar</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Categoria")">Categorias</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Cliente")">Clientes</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"ContaReceber")">Contas a Receber</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"CartaoCredito")">Cartões de Crédito</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Comprar")">Compras</a>
+                    <a class="dropdown-item" href="@Url.Action("Index" ,"Contabilidade")">Contabilidade</a>
+                </div>
 
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("Cadastro")">
-                <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
-                <span>Cadastrar Categoria</span>
-            </a>
-        </li>
-    </ul>
-</div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Cadastro")">
+                    <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
+                    <span>Cadastrar Categoria</span>
+                </a>
+            </li>
+        </ul>
+        <div class="container">
+            <div class="card card-register mx-auto mt-4">
+                <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/receive-cash.png"></i> Registro de contas a pagar</div>
+                <div class="card-body">
+                    <form action="@Url.Action("Store")">
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="form-label-group">
+                                        <input type="text" id="nome" class="form-control" placeholder="Conta receber" required="required" autofocus="autofocus">
+                                        <label for="nome">Nome</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="form-label-group">
+                                        <select id="campo-categoria" name="idCliente" class="form-control" required="required">
+
+                                            <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome do cliente</option>
+
+                                            @foreach (Model.Cliente cliente in ViewBag.Cliente)
+                                            {
+                                                <option value="@cliente">@cliente.Nome </option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="form-label-group">
+                                        <select id="campo-categoria" name="idCategoria" class="form-control" required="required">
+
+                                            <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome da Categoria</option>
+
+                                            @foreach (Model.Categoria categoria in ViewBag.Categoria)
+                                            {
+                                                <option value="@categoria">@categoria.Nome </option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col-md-12 ">
+                                    <label for="data_compra">Data Pagamento</label>
+                                    <input class="form-control" type="date" id="data_pagamento" name="data_pagamento" placeholder="data pagamento" required="required" autofocus="autofocus">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="form-label-group">
+                                        <input type="text" id="valor" class="form-control" placeholder="valor" required="required" autofocus="autofocus">
+                                        <label for="valor">Valor</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-success col-md-12" type="submit">Registrar</button>
+                    </form>
+                    <div class="text-center">
+                        <a class="d-block small mt-3" href="#">Deseja editar alguma compra cadastrada ?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
