@@ -38,87 +38,88 @@
     <div class="container">
         <div class="card card-register mx-auto mt-4">
             <div class="card-header"><img src="https://img.icons8.com/nolan/35/000000/edit-user-male.png">Editar Cliente</div>
-            <div class="card-body"></div>
-            <form action="@Url.Action("Editar")">
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <div class="form-label-group">
-                                <input type="text" id="id" name="id" class="form-control"
-                                       placeholder="Código" required="required"
-                                       value="@ViewBag.Usuario.Id" readonly="readonly" />
-                                <label for="id">Código</label>
+            <div class="card-body">
+
+                <form action="@Url.Action("Editar")" method="post">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <input type="text" id="id" name="id" class="form-control"
+                                           placeholder="Código" required="required"
+                                           value="@ViewBag.Usuario.Id" readonly="readonly" />
+                                    <label for="id">Código</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <div class="form-label-group">
-                                <input type="text" name="login" class="form-control"
-                                       placeholder="Login" required="required" id="login"
-                                       value="@ViewBag.Usuario.Login" />
-                                <label for="login"> Login</label>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <input type="text" name="login" class="form-control"
+                                           placeholder="Login" required="required" id="login"
+                                           value="@ViewBag.Usuario.Login" />
+                                    <label for="login"> Login</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <div class="form-label-group">
-                                <input type="text" name="senha" id="senha" class="form-control"
-                                       placeholder="Senha" required="required"
-                                       value="@ViewBag.Usuario.Senha" />
-                                <label for="senha">Senha</label>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <input type="text" name="senha" id="senha" class="form-control"
+                                           placeholder="Senha" required="required"
+                                           value="@ViewBag.Usuario.Senha" />
+                                    <label for="senha">Senha</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <div class="form-label-group">
-                                <input type="datetime" name="data_nascimento" id="campo-data-vencimento"
-                                       class="form-control" placeholder="Data Nascimento" required="required"
-                                       value="@ViewBag.Usuario.DataNascimento" />
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <input type="datetime" name="data_nascimento" id="campo-data-vencimento"
+                                           class="form-control" placeholder="Data Nascimento" required="required"
+                                           value="@ViewBag.Usuario.DataNascimento" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <div class="form-label-group">
-                                <label for="campo-categoria">Categoria</label>
-                                <select id="campo-categoria" name="idContabilidade" class="form-control" required="required">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <label for="campo-categoria"></label>
+                                    <select id="campo-categoria" name="idContabilidade" class="form-control" required="required">
 
 
-                                    @foreach (Model.Contabilidade contabilidade in ViewBag.Contabilidades)
-                                    {
-                                        if (contabilidade.Id == ViewBag.Usuario.IdContabilidade)
+                                        @foreach (Model.Contabilidade contabilidade in ViewBag.Contabilidades)
                                         {
-                                            <option value="@contabilidade.Id" selected="selected">@contabilidade.Nome</option>
+                                            if (contabilidade.Id == ViewBag.Usuario.IdContabilidade)
+                                            {
+                                                <option value="@contabilidade.Id" selected="selected">@contabilidade.Nome</option>
+
+                                            }
+                                            else
+                                            {
+                                                <option value="@contabilidade.Id">@contabilidade.Nome</option>
+                                            }
 
                                         }
-                                        else
-                                        {
-                                            <option value="@contabilidade.Id">@contabilidade.Nome</option>
-                                        }
-
-                                    }
 
 
 
-                                </select>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <button class="btn btn-success col-md-12" type="submit">Editar</button>
-            </form>
+                    <button class="btn btn-success col-md-12" type="submit">Editar</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
