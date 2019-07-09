@@ -37,11 +37,11 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Store(int idCliente, int idCategoria, string nome, DateTime data_pagamento, decimal valor)
+        public ActionResult Store(int idCliente, int idCategoria, string nome, DateTime dataPagamento, decimal valor)
         {
             ContaReceber contaReceber = new ContaReceber();
             contaReceber.Nome = nome;
-            contaReceber.DataPagamento = data_pagamento;
+            contaReceber.DataPagamento = dataPagamento;
             contaReceber.Valor = valor;
             contaReceber.IdCliente = idCliente;
             contaReceber.IdCategoria = idCategoria;
@@ -68,15 +68,15 @@ namespace View.Controllers
             List<Categoria> categorias = categoriaRepository.ObterTodos("");
             ViewBag.Categorias = categorias;
 
-            return RedirectToAction("Index");
+            return View();
         }
 
-        public ActionResult Update(int id, string nome, DateTime data_pagamento, decimal valor, int idCliente, int idCategoria)
+        public ActionResult Update(int id, int idCliente, int idCategoria, string nome, DateTime dataPagamento, decimal valor)
         {
             ContaReceber contaReceber = new ContaReceber();
             contaReceber.Id = id;
             contaReceber.Nome = nome;
-            contaReceber.DataPagamento = data_pagamento;
+            contaReceber.DataPagamento = dataPagamento;
             contaReceber.Valor = valor;
             contaReceber.IdCliente = idCliente;
             contaReceber.IdCategoria = idCategoria;

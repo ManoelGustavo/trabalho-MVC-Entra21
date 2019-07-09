@@ -29,10 +29,94 @@
 
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("Cadastro")">
+            <a class="nav-link" href="@Url.Action("Editar")">
                 <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
-                <span>Cadastrar Categoria</span>
+                <span>Editar Categoria</span>
             </a>
         </li>
     </ul>
+    <div class="container">
+        <div class="card card-register mx-auto mt-4">
+            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/receive-cash.png"></i> Registro de contas a pagar</div>
+            <div class="card-body">
+                <form action="@Url.Action("Update")" method="post">
+                    <input type="hidden" name="id" value="@ViewBag.ContaReceber.Id" />
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <input type="text" id="nome" class="form-control" placeholder="Conta receber" required="required" autofocus="autofocus" name="nome" value="@ViewBag.ContaReceber.Nome">
+                                    <label for="nome">Nome</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <select id="campo-categoria" name="idCliente" class="form-control" required="required">
+                                        @foreach (Model.Cliente cliente in ViewBag.Clientes)
+                                        {
+                                            if (true)
+                                            {
+                                                <option value="@cliente.Id" selected="selected">@cliente.Nome</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@cliente.Id">@cliente.Nome</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <select id="campo-categoria" name="idCategoria" class="form-control" required="required">
+                                        @foreach (Model.Categoria categoria in ViewBag.Categorias)
+                                        {
+                                            if (true)
+                                            {
+                                                <option value="@categoria.Id" selected="selected">@categoria.Nome</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@categoria.Id">@categoria.Nome </option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12 ">
+                                <label for="data_pagamento">Data Pagamento</label>
+                                <input class="form-control" type="date" id="data_pagamento" name="dataPagamento" placeholder="data pagamento" required="required" autofocus="autofocus" value="@ViewBag.ContaReceber.DataPagamento">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-label-group">
+                                    <input type="text" id="valor" class="form-control" placeholder="valor" required="required" autofocus="autofocus" name="valor" value="@ViewBag.ContaReceber.Valor">
+                                    <label for="valor">Valor</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success col-md-12" type="submit">Registrar</button>
+                </form>
+                <div class="text-center">
+                    <a class="d-block small mt-3" href="@Url.Action("Index", "ContaReceber")">Deseja editar alguma compra cadastrada ?</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

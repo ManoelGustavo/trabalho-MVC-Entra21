@@ -26,7 +26,7 @@ namespace Repository.Repositories
         public bool Atualizar(ContaReceber contaReceber)
         {
             SqlCommand comando = Conexao.AbrirConexao();
-            comando.CommandText = @"UPDATE contas_receber SET id_cliente = @ID_CLIENTE,id_categoria = @ID_CARTEGORIA,nome = @NOME,data_pagamento = @DATA_PAGAMENTO,valor = @VALOR WHERE id=@ID";
+            comando.CommandText = @"UPDATE contas_receber SET id_cliente = @ID_CLIENTE, id_categoria = @ID_CATEGORIA, nome = @NOME, data_pagamento = @DATA_PAGAMENTO, valor = @VALOR WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", contaReceber.Id);
             comando.Parameters.AddWithValue("@ID_CLIENTE", contaReceber.IdCliente);
             comando.Parameters.AddWithValue("@ID_CATEGORIA", contaReceber.IdCategoria);
