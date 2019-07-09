@@ -27,16 +27,10 @@
                 </div>
 
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Cadastro")">
-                    <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
-                    <span>Cadastrar Categoria</span>
-                </a>
-            </li>
         </ul>
         <div class="container">
             <div class="card card-register mx-auto mt-4">
-                <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/receive-cash.png"></i> Registro de contas a pagar</div>
+                <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/receive-cash.png"></i> Registro de Conta Receber</div>
                 <div class="card-body">
                     <form action="@Url.Action("Store")" method="post">
                         <div class="form-group">
@@ -91,7 +85,7 @@
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <div class="form-label-group">
-                                        <input type="text" id="valor" class="form-control" placeholder="valor" required="required" autofocus="autofocus" name="valor">
+                                        <input type="text" id="valor" class="form-control campo-valor" placeholder="valor" required="required" autofocus="autofocus" name="valor" maxlength="8">
                                         <label for="valor">Valor</label>
                                     </div>
                                 </div>

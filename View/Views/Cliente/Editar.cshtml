@@ -28,16 +28,10 @@
             </div>
 
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("Editar")">
-                <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
-                <span>Cadastrar Categoria</span>
-            </a>
-        </li>
     </ul>
     <div class="container">
         <div class="card card-register mx-auto mt-4">
-            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/client-company.png"></i> Registro de Cliente</div>
+            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/client-company.png"></i> Editar Cliente</div>
             <div class="card-body">
                 <form action="@Url.Action("Update")" method="post">
                     <input type="hidden" name="id" value="@ViewBag.Cliente.Id" />
