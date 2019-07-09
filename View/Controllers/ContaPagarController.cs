@@ -38,28 +38,28 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Store(int idCliente, int idCategoria, string nome, DateTime data_vencimento, DateTime data_pagamento, decimal valor)
+        public ActionResult Store(int idCliente, int idCategoria, string nome, DateTime dataVencimento, DateTime dataPagamento, decimal valor)
         {
             ContaPagar contaPagar = new ContaPagar();
             contaPagar.IdCliente = idCliente;
             contaPagar.IdCategoria = idCategoria;
             contaPagar.Nome = nome;
-            contaPagar.DataVencimento = data_vencimento;
-            contaPagar.DataPagamento = data_pagamento;
+            contaPagar.DataVencimento = dataVencimento;
+            contaPagar.DataPagamento = dataPagamento;
             contaPagar.Valor = valor;
             repository.Inserir(contaPagar);
             return RedirectToAction("Index");
         }
 
-        public ActionResult Update(int id, int idCliente, int idCategoria, string nome, DateTime data_vencimento, DateTime data_pagamento, decimal valor)
+        public ActionResult Update(int id, int idCliente, int idCategoria, string nome, DateTime dataVencimento, DateTime dataPagamento, decimal valor)
         {
             ContaPagar contaPagar = new ContaPagar();
             contaPagar.Id = id;
             contaPagar.IdCliente = idCliente;
             contaPagar.IdCategoria = idCategoria;
             contaPagar.Nome = nome;
-            contaPagar.DataVencimento = data_vencimento;
-            contaPagar.DataPagamento = data_pagamento;
+            contaPagar.DataVencimento = dataVencimento;
+            contaPagar.DataPagamento = dataPagamento;
             contaPagar.Valor = valor;
             repository.Atualizar(contaPagar);
             return RedirectToAction("Index");
