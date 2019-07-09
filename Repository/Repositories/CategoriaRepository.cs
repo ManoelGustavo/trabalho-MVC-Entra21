@@ -18,7 +18,6 @@ namespace Repository.Repositories
             SqlCommand comando = Conexao.AbrirConexao();
             comando.CommandText = "DELETE FROM categorias WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
-
             int quantidade = comando.ExecuteNonQuery();
             comando.Connection.Close();
             return quantidade == 1;
@@ -50,7 +49,7 @@ namespace Repository.Repositories
         public Categoria ObterPeloId(int id)
         {
             SqlCommand comando = Conexao.AbrirConexao();
-            comando.CommandText = "SELECT * FROM categoria WHERE id = @ID";
+            comando.CommandText = "SELECT * FROM categorias WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 
             DataTable table = new DataTable();

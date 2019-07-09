@@ -41,6 +41,7 @@
             <div class="card-body">
 
                 <form action="@Url.Action("Editar")" method="post">
+                    <input type="hidden" name="id" value="@ViewBag.Usuario.Id" />
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12">
@@ -109,9 +110,6 @@
                                             }
 
                                         }
-
-
-
                                     </select>
                                 </div>
                             </div>

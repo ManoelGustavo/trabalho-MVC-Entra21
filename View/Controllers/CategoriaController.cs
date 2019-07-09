@@ -50,7 +50,7 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Updata(int id, string nome)
+        public ActionResult Update(int id, string nome)
         {
             Categoria categoria = new Categoria();
             categoria.Id = id;
