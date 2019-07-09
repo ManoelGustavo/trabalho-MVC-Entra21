@@ -32,11 +32,11 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Store(int idCliente, string numero, DateTime data_vencimento, string cvv)
+        public ActionResult Store(int idCliente, string numero, DateTime dataVencimento, string cvv)
         {
             CartaoCredito cartaoCredito = new CartaoCredito();
             cartaoCredito.Numero = numero;
-            cartaoCredito.DataVencimento = data_vencimento;
+            cartaoCredito.DataVencimento = dataVencimento;
             cartaoCredito.Cvv = cvv;
             cartaoCredito.IdCliente = idCliente;
             repository.Inserir(cartaoCredito);
@@ -57,15 +57,15 @@ namespace View.Controllers
             ClienteRepository clienteRepository = new ClienteRepository();
             List<Cliente> clientes = clienteRepository.ObterTodos("");
             ViewBag.Clientes = clientes;
-            return RedirectToAction("Index");
+            return View();
         }
 
-        public ActionResult Update(int id, string numero, DateTime data_vencimento, string cvv, int idCliente)
+        public ActionResult Update(int id, string numero, DateTime dataVencimento, string cvv, int idCliente)
         {
             CartaoCredito cartaoCredito = new CartaoCredito();
             cartaoCredito.Id = id;
             cartaoCredito.Numero = numero;
-            cartaoCredito.DataVencimento = data_vencimento;
+            cartaoCredito.DataVencimento = dataVencimento;
             cartaoCredito.Cvv = cvv;
             cartaoCredito.IdCliente = idCliente;
             repository.Atualizar(cartaoCredito);
