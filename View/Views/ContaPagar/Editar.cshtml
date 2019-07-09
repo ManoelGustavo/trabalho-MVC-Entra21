@@ -97,7 +97,7 @@
                         <div class="form-row">
                             <div class="col-md-12 ">
                                 <label for="campo-data-pagamento">Data Pagamento</label>
-                                <input class="form-control campo-data" type="date" id="campo-data-pagamento" name="dataPagamento" placeholder="data pagamento" required="required" value="@ViewBag.ContaPagar.DataPagamento">
+                                <input class="form-control" type="date" id="campo-data-pagamento" name="dataPagamento" placeholder="data pagamento" value="@ViewBag.ContaPagar.DataPagamento.ToString("yyyy-MM-dd")">
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                         <div class="form-row">
                             <div class="col-md-12 ">
                                 <label for="campo-data-vencimento">Data Vencimento</label>
-                                <input class="form-control campo-data" type="date" id="campo-data-vencimento" name="dataVencimento" placeholder="data_vencimento" required="required" value="@ViewBag.ContaPagar.DataVencimento">
+                                <input class="form-control" type="date" id="campo-data-vencimento" name="dataVencimento" placeholder="data_vencimento" value="@ViewBag.ContaPagar.DataVencimento.ToString("yyyy-MM-dd")">
                             </div>
                         </div>
                     </div>

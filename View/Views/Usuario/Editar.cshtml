@@ -82,9 +82,9 @@
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <input type="datetime" name="data_nascimento" id="campo-data-vencimento"
+                                    <input type="date" name="dataNascimento" id="campo-data-nascimento"
                                            class="form-control" placeholder="Data Nascimento" required="required"
-                                           value="@ViewBag.Usuario.DataNascimento" />
+                                           value="@ViewBag.Usuario.DataNascimento.ToString("yyyy-MM-dd")" />
                                 </div>
                             </div>
                         </div>
