@@ -39,7 +39,7 @@
         <div class="card card-register mx-auto mt-4">
             <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/client-company.png"></i> Registro de Cliente</div>
             <div class="card-body">
-                <form action="@Url.Action("Store")">
+                <form action="@Url.Action("Store")" method="post">
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12">
@@ -54,8 +54,8 @@
                         <div class="form-row">
                             <div class="col-md-12 ">
                                 <div class="form-label-group">
+                                    <input type="text" id="cpf" class="form-control" placeholder="cpf" required="required" autofocus="autofocus" name="cpf" maxlength="14">
                                     <label for="cpf">CPF</label>
-                                    <input type="text" id="cpf" class="form-control" placeholder="cpf" required="required" autofocus="autofocus" name="cpf">
                                 </div>
                             </div>
                         </div>
