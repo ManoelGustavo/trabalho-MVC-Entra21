@@ -58,7 +58,7 @@
                                     <select id="campo-categoria" name="idCliente" class="form-control" required="required">
                                         @foreach (Model.Cliente cliente in ViewBag.Clientes)
                                         {
-                                            if (true)
+                                            if (cliente.Id == ViewBag.ContaReceber.IdCliente)
                                             {
                                                 <option value="@cliente.Id" selected="selected">@cliente.Nome</option>
                                             }
@@ -79,7 +79,7 @@
                                     <select id="campo-categoria" name="idCategoria" class="form-control" required="required">
                                         @foreach (Model.Categoria categoria in ViewBag.Categorias)
                                         {
-                                            if (true)
+                                            if (categoria.Id == ViewBag.ContaReceber.IdCategoria)
                                             {
                                                 <option value="@categoria.Id" selected="selected">@categoria.Nome</option>
                                             }
