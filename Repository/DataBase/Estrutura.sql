@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS categorias;
 DROP TABLE IF EXISTS contas_pagar;
 DROP TABLE IF EXISTS contas_receber;
 
-SELECT * FROM cartoes_credito;
+SELECT * FROM compras;
 
 CREATE TABLE contabilidades(
 	id INT PRIMARY KEY IDENTITY(1,1),

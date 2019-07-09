@@ -28,28 +28,28 @@ namespace View.Controllers
         public ActionResult Cadastro()
         {
             CartaoCreditoRepository repository = new CartaoCreditoRepository();
-            List<CartaoCredito> cartoesCredito = repository.ObterTodos("");
-            ViewBag.CartoesCreditos = cartoesCredito;
+            List<CartaoCredito> cartoesCreditos = repository.ObterTodos("");
+            ViewBag.CartoesCreditos = cartoesCreditos;
             return View();
         }
 
-        public ActionResult Store(int idCartaoCredito, decimal valor, DateTime data_compra)
+        public ActionResult Store(int idCartaoCredito, decimal valor, DateTime dataCompra)
         {
             Comprar comprar = new Comprar();
             comprar.IdCartaoCredito = idCartaoCredito;
             comprar.Valor = valor;
-            comprar.DataCompra = data_compra;
+            comprar.DataCompra = dataCompra;
             repository.Inserir(comprar);
             return RedirectToAction("Index");
         }
 
-        public ActionResult Update(int id, int idCartaoCredito, decimal valor, DateTime data_compra)
+        public ActionResult Update(int id, int idCartaoCredito, decimal valor, DateTime dataCompra)
         {
             Comprar comprar = new Comprar();
             comprar.Id = id;
             comprar.IdCartaoCredito = idCartaoCredito;
             comprar.Valor = valor;
-            comprar.DataCompra = data_compra;
+            comprar.DataCompra = dataCompra;
             repository.Atualizar(comprar);
             return RedirectToAction("Index");
         }
@@ -66,8 +66,8 @@ namespace View.Controllers
             ViewBag.Comprar = comprar;
 
             CartaoCreditoRepository cartaoCreditoRepository = new CartaoCreditoRepository();
-            List<CartaoCredito> cartoesCredito = cartaoCreditoRepository.ObterTodos("");
-            ViewBag.CartoesCredito = cartoesCredito;
+            List<CartaoCredito> cartoesCreditos = cartaoCreditoRepository.ObterTodos("");
+            ViewBag.CartoesCreditos = cartoesCreditos;
 
             return View();
         }
