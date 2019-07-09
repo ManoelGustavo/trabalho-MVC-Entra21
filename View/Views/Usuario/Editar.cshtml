@@ -29,7 +29,7 @@
 
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("Cadastro")">
+            <a class="nav-link" href="@Url.Action("Editar")">
                 <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
                 <span>Cadastrar Categoria</span>
             </a>
@@ -40,7 +40,7 @@
             <div class="card-header"><img src="https://img.icons8.com/nolan/35/000000/edit-user-male.png">Editar Cliente</div>
             <div class="card-body">
 
-                <form action="@Url.Action("Editar")" method="post">
+                <form action="@Url.Action("Update")" method="post">
                     <input type="hidden" name="id" value="@ViewBag.Usuario.Id" />
                     <div class="form-group">
                         <div class="form-row">
@@ -117,6 +117,9 @@
                     </div>
                     <button class="btn btn-success col-md-12" type="submit">Editar</button>
                 </form>
+                <div class="text-center">
+                    <a class="d-block small mt-3" href="@Url.Action("Index", "Cliente")">Deseja alterar algum cliente já registrado ?</a>
+                </div>
             </div>
         </div>
     </div>
