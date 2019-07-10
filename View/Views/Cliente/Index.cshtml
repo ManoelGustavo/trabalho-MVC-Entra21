@@ -1,8 +1,8 @@
 ﻿
 @{
-                /**/
+    /**/
 
-                ViewBag.Title = "Index";
+    ViewBag.Title = "Index";
 }
 
 <div id="wrapper">
@@ -20,7 +20,7 @@
                 <span>Listas</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuarios</a>
+                <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuários</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"ContaPagar")">Contas a pagar</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"Categoria")">Categorias</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"Cliente")">Clientes</a>
@@ -39,11 +39,10 @@
         </li>
     </ul>
     <div id="content-wrapper">
-
         <div class="card mb-3">
             <div class="card-header">
-                <i class="fas fa-table"></i>
-                Clientes
+                <a href="@Url.Action("Cadastro")" class="btn btn-primary float-right"><i class="fa fa-plus"></i> Novo Cliente</a>
+                <i class="fas fa-table"></i>Clientes
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -53,7 +52,7 @@
                                 <th>Código</th>
                                 <th>Nome</th>
                                 <th>CPF</th>
-                                <th>Cliente Contabilidade</th>
+                                <th>Contabilidade</th>
                                 <th>Ação</th>
                             </tr>
                         </thead>

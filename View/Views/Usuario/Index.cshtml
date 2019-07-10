@@ -18,7 +18,7 @@
                 <span>Listas</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuarios</a>
+                <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuários</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"ContaPagar")">Contas a pagar</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"Categoria")">Categorias</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"Cliente")">Clientes</a>
@@ -49,9 +49,8 @@
                         <thead>
                             <tr>
                                 <th>Código</th>
-                                <th>Nome Contabilidade</th>
+                                <th>Contabilidade</th>
                                 <th>Login</th>
-                                <th>Senha</th>
                                 <th>Data Nascimento</th>
                                 <th>Ação</th>
                             </tr>
@@ -63,7 +62,6 @@
                                     <td>@usuario.Id</td>
                                     <td>@usuario.Contabilidade.Nome</td>
                                     <td>@usuario.Login</td>
-                                    <td>@usuario.Senha</td>
                                     <td>@usuario.DataNascimento</td>
                                     <td>
 
@@ -82,7 +80,6 @@
                                 <th>Código</th>
                                 <th>Nome Contabilidade</th>
                                 <th>Login</th>
-                                <th>Senha</th>
                                 <th>Data Nascimento</th>
                                 <th>Ação</th>
                             </tr>

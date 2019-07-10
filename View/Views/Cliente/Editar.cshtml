@@ -17,7 +17,7 @@
                 <span>Listas</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuarios</a>
+                <a class="dropdown-item" href="@Url.Action("Index" ,"Usuario")"> Usuários</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"ContaPagar")">Contas a pagar</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"Categoria")">Categorias</a>
                 <a class="dropdown-item" href="@Url.Action("Index" ,"Cliente")">Clientes</a>
@@ -35,6 +35,18 @@
             <div class="card-body">
                 <form action="@Url.Action("Update")" method="post">
                     <input type="hidden" name="id" value="@ViewBag.Cliente.Id" />
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text" id="id" name="id" class="form-control"
+                                           placeholder="Código" required="required"
+                                           value="@ViewBag.Cliente.Id" readonly="readonly" />
+                                    <label for="id">Código</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12">
