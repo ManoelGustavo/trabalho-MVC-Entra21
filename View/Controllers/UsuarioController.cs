@@ -33,25 +33,25 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Store(int idContabilidade, string login, string senha, DateTime data_nascimento)
+        public ActionResult Store(int idContabilidade, string login, string senha, DateTime dataNascimento)
         {
             Usuario usuario = new Usuario();
             usuario.IdContabilidade = idContabilidade;
             usuario.Login = login;
             usuario.Senha = senha;
-            usuario.DataNascimento = data_nascimento;
+            usuario.DataNascimento = dataNascimento;
             repository.Inserir(usuario);
             return RedirectToAction("Index");
         }
 
-        public ActionResult Update(int id, int idContabilidade, string login, string senha, DateTime data_nascimento)
+        public ActionResult Update(int id, int idContabilidade, string login, string senha, DateTime dataNascimento)
         {
             Usuario usuario = new Usuario();
             usuario.Id = id;
             usuario.IdContabilidade = idContabilidade;
             usuario.Login = login;
             usuario.Senha = senha;
-            usuario.DataNascimento = data_nascimento;
+            usuario.DataNascimento = dataNascimento;
             repository.Atualizar(usuario);
             return RedirectToAction("Index");
         }

@@ -28,16 +28,10 @@
             </div>
 
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("Editar")">
-                <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
-                <span>Cadastrar Categoria</span>
-            </a>
-        </li>
     </ul>
     <div class="container">
         <div class="card card-register mx-auto mt-4">
-            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/insert-card.png"></i> Registro de cartão de crédito</div>
+            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/insert-card.png"></i> Editar Cartão Crédito</div>
             <div class="card-body">
                 <form action="@Url.Action("Update")" method="post">
                     <input type="hidden" name="id" value="@ViewBag.CartaoCredito.Id" />
@@ -55,7 +49,7 @@
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <input type="text" id="cvv" class="form-control" placeholder="cvv cartao" required="required" autofocus="autofocus" name="cvv" value="@ViewBag.CartaoCredito.Cvv">
+                                    <input type="text" id="cvv" class="form-control" placeholder="cvv cartao" required="required" autofocus="autofocus" name="cvv" maxlength="3" value="@ViewBag.CartaoCredito.Cvv">
                                     <label for="cvv">CVV</label>
                                 </div>
                             </div>
@@ -85,8 +79,8 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12 ">
-                                <label for="data">Data Vencimento</label>
-                                <input class="form-control" type="date" id="data" name="dataVencimento" placeholder="data Vencimento" required="required" autofocus="autofocus" value="@ViewBag.CartaoCredito.DataVencimento">
+                                <label for="campo-data-vencimento">Data Vencimento</label>
+                                <input class="form-control" type="date" id="campo-data-vencimento" name="dataVencimento" placeholder="data Vencimento" required="required" autofocus="autofocus" value="@ViewBag.CartaoCredito.DataVencimento.ToString("yyyy-MM-dd")">
                             </div>
                         </div>
                     </div>

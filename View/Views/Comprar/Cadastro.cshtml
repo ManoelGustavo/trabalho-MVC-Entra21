@@ -28,23 +28,17 @@
             </div>
 
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("Cadastro")">
-                <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
-                <span>Cadastrar Categoria</span>
-            </a>
-        </li>
     </ul>
     <div class="container">
         <div class="card card-register mx-auto mt-4">
-            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/shopping-cart.png"></i> Registro de compras</div>
+            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/shopping-cart.png"></i> Registro de Compra</div>
             <div class="card-body">
                 <form action="@Url.Action("Store")" method="post">
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <input type="text" id="valorCompra" class="form-control" placeholder="Valor Compra" required="required" autofocus="autofocus" name="valor">
+                                    <input type="text" id="valorCompra" class="form-control campo-valor" placeholder="Valor Compra" required="required" autofocus="autofocus" name="valor">
                                     <label for="valorCompra">Valor</label>
                                 </div>
                             </div>
@@ -55,7 +49,7 @@
                             <div class="col-md-12">
                                 <div class="form-label-group">
                                     <select id="campo-categoria" name="idCartaoCredito" class="form-control" required="required">
-                                        <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome do cliente</option>
+                                        <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o numero do cartao de credito</option>
                                         @foreach (Model.CartaoCredito cartaoCredito in ViewBag.CartoesCreditos)
                                         {
                                             <option value="@cartaoCredito.Id">@cartaoCredito.Numero</option>
@@ -68,8 +62,8 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12 ">
-                                <label for="data_compra">Data Compra</label>
-                                <input class="form-control" type="date" id="data_compra" name="dataCompra" placeholder="data compra" required="required" autofocus="autofocus">
+                                <label for="campo-data-pagamento">Data Compra</label>
+                                <input class="form-control" type="date" id="campo-data-pagamento" name="dataCompra" placeholder="data compra">
                             </div>
                         </div>
                     </div>

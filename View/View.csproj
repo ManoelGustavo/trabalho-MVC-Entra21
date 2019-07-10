@@ -97,6 +97,10 @@
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Model.dll" />
+    <Content Include="bin\Model.pdb" />
+    <Content Include="bin\Repository.dll" />
+    <Content Include="bin\Repository.pdb" />
     <Content Include="bin\System.Web.Helpers.dll" />
     <Content Include="bin\System.Web.Mvc.dll" />
     <Content Include="bin\System.Web.Razor.dll" />
@@ -1893,6 +1897,7 @@
     <Content Include="Content\vendor\jquery\jquery.min.map" />
     <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
     <Content Include="obj\Debug\View.csprojAssemblyReference.cache" />
+    <Content Include="bin\View.dll.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

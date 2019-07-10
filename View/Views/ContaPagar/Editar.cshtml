@@ -28,16 +28,10 @@
             </div>
 
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("Editar")">
-                <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
-                <span>Editar Categoria</span>
-            </a>
-        </li>
     </ul>
     <div class="container">
         <div class="card card-register mx-auto mt-4">
-            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/receipt.png"></i> Registro de contas a pagar</div>
+            <div class="card-header"> <i><img src="https://img.icons8.com/nolan/35/000000/receipt.png"></i> Editar Conta Pagar</div>
             <div class="card-body">
                 <form action="@Url.Action("Update")" method="post">
                     <input type="hidden" name="id" value="@ViewBag.ContaPagar.Id" />
@@ -45,7 +39,7 @@
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <input type="text" id="nome" class="form-control" placeholder="Conta pagar" required="required" autofocus="autofocus" name="nome" value="@ViewBag.ContaPagar.Nome">
+                                    <input type="text" id="nome" class="form-control" placeholder="Conta pagar" required="required" name="nome" value="@ViewBag.ContaPagar.Nome">
                                     <label for="nome">Nome</label>
                                 </div>
                             </div>
@@ -96,16 +90,16 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12 ">
-                                <label for="data_pagamento">Data Pagamento</label>
-                                <input class="form-control" type="date" id="data_pagamento" name="dataPagamento" placeholder="data pagamento" required="required" value="@ViewBag.ContaPagar.DataPagamento">
+                                <label for="campo-data-pagamento">Data Pagamento</label>
+                                <input class="form-control" type="date" id="campo-data-pagamento" name="dataPagamento" placeholder="data pagamento" value="@ViewBag.ContaPagar.DataPagamento.ToString("yyyy-MM-dd")">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12 ">
-                                <label for="data_vencimento">Data Vencimento</label>
-                                <input class="form-control" type="date" id="data_vencimento" name="dataVencimento" placeholder="data_vencimento" required="required" value="@ViewBag.ContaPagar.DataVencimento">
+                                <label for="campo-data-vencimento">Data Vencimento</label>
+                                <input class="form-control" type="date" id="campo-data-vencimento" name="dataVencimento" placeholder="data_vencimento" value="@ViewBag.ContaPagar.DataVencimento.ToString("yyyy-MM-dd")">
                             </div>
                         </div>
                     </div>
@@ -113,7 +107,7 @@
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <input type="text" id="valor" class="form-control" placeholder="valor" required="required" autofocus="autofocus" name="valor" value="@ViewBag.ContaPagar.Valor">
+                                    <input type="text" id="valor" class="form-control campo-valor" placeholder="valor" required="required" name="valor" value="@ViewBag.ContaPagar.Valor">
                                     <label for="valor">Valor</label>
                                 </div>
                             </div>

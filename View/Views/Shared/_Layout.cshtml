@@ -14,7 +14,7 @@
     <!-- Custom styles for this template-->
     <link href="~/Content/css/sb-admin.css" rel="stylesheet">
 
- 
+
 
 </head>
 
@@ -80,12 +80,8 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#cpf").mask("999.999.999-99");
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#data").mask("99/99/9999");
+            $(".campo-valor").mask("9999,99");
+            $(".cpf").mask("999.999.999-99");
         });
     </script>
 </body>

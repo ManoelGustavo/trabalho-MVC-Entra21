@@ -28,12 +28,6 @@
             </div>
 
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("Editar")">
-                <i><img src="https://img.icons8.com/nolan/40/000000/accounting.png"></i>
-                <span>Editar Categoria</span>
-            </a>
-        </li>
     </ul>
     <div class="container">
         <div class="card card-register mx-auto mt-4">
@@ -96,8 +90,8 @@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-12 ">
-                                <label for="data_pagamento">Data Pagamento</label>
-                                <input class="form-control" type="date" id="data_pagamento" name="dataPagamento" placeholder="data pagamento" required="required" autofocus="autofocus" value="@ViewBag.ContaReceber.DataPagamento">
+                                <label for="campo-data-pagamento">Data Pagamento</label>
+                                <input class="form-control" type="date" id="campo-data-pagamento" name="dataPagamento" placeholder="data pagamento" value="@ViewBag.ContaReceber.DataPagamento.ToString("yyyy-MM-dd")">
                             </div>
                         </div>
                     </div>
@@ -105,7 +99,7 @@
                         <div class="form-row">
                             <div class="col-md-12">
                                 <div class="form-label-group">
-                                    <input type="text" id="valor" class="form-control" placeholder="valor" required="required" autofocus="autofocus" name="valor" value="@ViewBag.ContaReceber.Valor">
+                                    <input type="text" id="valor" class="form-control campo-valor" placeholder="valor" required="required" autofocus="autofocus" name="valor" value="@ViewBag.ContaReceber.Valor">
                                     <label for="valor">Valor</label>
                                 </div>
                             </div>
