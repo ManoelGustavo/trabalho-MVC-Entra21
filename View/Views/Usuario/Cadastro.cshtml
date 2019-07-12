@@ -58,7 +58,7 @@
                             <div class="form-row">
                                 <div class="col-md-12 ">
                                     <label for="campo-data-nascimento">Data Nascimento</label>
-                                    <input class="form-control" type="date" id="campo-data-nascimento" name="dataNascimento" placeholder="data_nascimento">
+                                    <input class="form-control" type="date" id="campo-data-nascimento" name="dataNascimento" placeholder="data_nascimento" required="required">
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                 <div class="col-md-12">
                                     <div class="form-label-group">
                                         <select id="campo-categoria" name="idContabilidade" class="form-control" required="required">
-                                            <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome da Contabilidade</option>
+                                            <option disabled="disabled" placeholder="cliente id" selected="selected" value="">Selecione o nome da Contabilidade</option>
                                             @foreach (Model.Contabilidade contabilidade in ViewBag.Contabilidades)
                                             {
                                                 <option value="@contabilidade.Id">@contabilidade.Nome </option>
