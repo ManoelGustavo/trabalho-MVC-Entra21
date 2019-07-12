@@ -39,8 +39,8 @@
     <div id="content-wrapper">
         <div class="card mb-3">
             <div class="card-header">
-                <i class="fas fa-table"></i>
-                Compras
+                <a href="@Url.Action("Cadastro")" class="btn btn-primary float-right mt-1"><i class="fa fa-plus"></i> Nova Compra</a>
+                <i class="fas fa-table fa-2x"></i> <i class="fa-2x">Compras</i>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -61,7 +61,7 @@
                                     <td>@comprar.Id</td>
                                     <td>@comprar.CartaoCredito.Cliente.Nome</td>
                                     <td>R$ @comprar.Valor</td>
-                                    <td>@comprar.DataCompra</td>
+                                    <td>@comprar.DataCompra.ToString("dd/MM/yyyy")</td>
                                     <td>
                                         <a href="@Url.Action("Editar", new { id = comprar.Id })" class="btn btn-outline-primary"><i class="fas fa-pen"></i> Editar</a>
                                         <a href="@Url.Action("Apagar", new { id = comprar.Id })" class="btn btn-outline-danger"><i class="fas fa-trash"></i> Apagar</a>

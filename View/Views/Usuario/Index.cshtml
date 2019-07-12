@@ -40,8 +40,8 @@
 
         <div class="card mb-3">
             <div class="card-header">
-                <i class="fas fa-table"></i>
-                Usuários
+                <a href="@Url.Action("Cadastro")" class="btn btn-primary float-right mt-1"><i class="fa fa-plus"></i> Novo Usuario</a>
+                <i class="fas fa-table fa-2x"></i> <i class="fa-2x">Usuarios</i>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -62,7 +62,7 @@
                                     <td>@usuario.Id</td>
                                     <td>@usuario.Contabilidade.Nome</td>
                                     <td>@usuario.Login</td>
-                                    <td>@usuario.DataNascimento</td>
+                                    <td>@usuario.DataNascimento.ToString("dd/MM/yyyy")</td>
                                     <td>
 
                                         <a href="@Url.Action("Editar", new { id = usuario.Id })" class="btn btn-outline-primary">

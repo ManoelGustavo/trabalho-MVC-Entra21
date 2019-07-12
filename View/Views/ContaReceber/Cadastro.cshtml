@@ -48,7 +48,7 @@
                                 <div class="col-md-12">
                                     <div class="form-label-group">
                                         <select id="campo-categoria" name="idCliente" class="form-control" required="required">
-                                            <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome do cliente</option>
+                                            <option disabled="disabled" placeholder="cliente id" selected="selected" value="">Selecione o nome do cliente</option>
                                             @foreach (Model.Cliente cliente in ViewBag.Clientes)
                                             {
                                                 <option value="@cliente.Id">@cliente.Nome</option>
@@ -63,7 +63,7 @@
                                 <div class="col-md-12">
                                     <div class="form-label-group">
                                         <select id="campo-categoria" name="idCategoria" class="form-control" required="required">
-                                            <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome da Categoria</option>
+                                            <option disabled="disabled" placeholder="cliente id" selected="selected" value="">Selecione o nome da Categoria</option>
                                             @foreach (Model.Categoria categoria in ViewBag.Categorias)
                                             {
                                                 <option value="@categoria.Id">@categoria.Nome </option>
@@ -77,7 +77,7 @@
                             <div class="form-row">
                                 <div class="col-md-12 ">
                                     <label for="campo-data-pagamento">Data Pagamento</label>
-                                    <input class="form-control" type="date" id="campo-data-pagamento" name="dataPagamento" placeholder="data_pagamento">
+                                    <input class="form-control" type="date" id="campo-data-pagamento" name="dataPagamento" placeholder="data_pagamento" required="required">
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <div class="form-label-group">
-                                        <input type="text" id="valor" class="form-control campo-valor" placeholder="valor" required="required" autofocus="autofocus" name="valor" maxlength="8">
+                                        <input type="text" id="valor" class="form-control campo-valor" placeholder="valor" required="required" name="valor" maxlength="8">
                                         <label for="valor">Valor</label>
                                     </div>
                                 </div>

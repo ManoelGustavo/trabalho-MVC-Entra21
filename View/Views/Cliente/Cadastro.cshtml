@@ -58,9 +58,7 @@
                             <div class="col-md-12">
                                 <div class="form-label-group">
                                     <select id="campo-categoria" name="idContabilidade" class="form-control" required="required">
-
-                                        <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione a Contabilidade</option>
-
+                                        <option disabled="disabled" placeholder="cliente id" selected="selected" value="">Selecione a Contabilidade</option>
                                         @foreach (Model.Contabilidade contabilidade in ViewBag.Contabilidades)
                                         {
                                             <option value="@contabilidade.Id">@contabilidade.Nome</option>

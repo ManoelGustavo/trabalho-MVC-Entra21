@@ -38,7 +38,7 @@
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <div class="form-label-group">
-                                        <input type="text" id="nome" class="form-control" placeholder="Conta pagar" required="required" name="nome">
+                                        <input type="text" id="nome" class="form-control" placeholder="Conta pagar" required="required" name="nome" autofocus="autofocus">
                                         <label for="nome">Nome</label>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                                     <div class="form-label-group">
                                         <select id="campo-categoria" name="idCliente" class="form-control" required="required">
 
-                                            <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome do cliente</option>
+                                            <option disabled="disabled" placeholder="cliente id" selected="selected" value="">Selecione o nome do cliente</option>
 
                                             @foreach (Model.Cliente cliente in ViewBag.Clientes)
                                             {
@@ -67,7 +67,7 @@
                                     <div class="form-label-group">
                                         <select id="campo-categoria" name="idCategoria" class="form-control" required="required">
 
-                                            <option disabled="disabled" placeholder="cliente id" selected="selected">Selecione o nome da Categoria</option>
+                                            <option disabled="disabled" placeholder="cliente id" selected="selected" value="">Selecione o nome da Categoria</option>
 
                                             @foreach (Model.Categoria categoria in ViewBag.Categorias)
                                             {
@@ -82,7 +82,7 @@
                             <div class="form-row">
                                 <div class="col-md-12 ">
                                     <label for="campo-data-pagamento">Data Pagamento</label>
-                                    <input class="form-control" type="date" id="campo-data-pagamento" name="dataPagamento" placeholder="dataPagamento">
+                                    <input class="form-control" type="date" id="campo-data-pagamento" name="dataPagamento" placeholder="dataPagamento" required="required">
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                             <div class="form-row">
                                 <div class="col-md-12 ">
                                     <label for="campo-data-vencimento">Data Vencimento</label>
-                                    <input class="form-control" type="date" id="campo-data-vencimento" name="dataVencimento" placeholder="dataVencimento">
+                                    <input class="form-control" type="date" id="campo-data-vencimento" name="dataVencimento" placeholder="dataVencimento" required="required">
                                 </div>
                             </div>
                         </div>
