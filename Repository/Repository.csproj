@@ -68,10 +68,7 @@
     <Content Include="DataBase\Estrutura.sql" />
     <Content Include="DataBase\EstruturaDeInserir.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{f7f57ce7-c05e-45e3-9ca2-466167efc8fe}</Project>
